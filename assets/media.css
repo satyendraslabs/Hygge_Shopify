@@ -20,9 +20,9 @@
     .image-with-text .grid__item {
         position: unset !important; 
     }
-    div#ImageWithText--template--17668769808574__image_with_text_yXKm4i {
+    .image-with-text__content {
         background: transparent;
-        position: absolute;
+        position: absolute !important;
         left: 0px;
     }
    
