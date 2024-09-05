@@ -148,8 +148,8 @@ div#shopify-section-template--17668769808574__collection_slider_B6RBy9 {
 <link rel="stylesheet" href="{{ 'slick.css' | asset_url }}"/>
 <link rel="stylesheet" href="{{ 'slick-theme.css' | asset_url }}"/>
 <div class="collection_slider page-width">
-  <h5>- The Categories</h5>
-  <h1>Browse by Category</h1>
+  <h5>{{ section.settings.description }}</h5>
+  <h1>{{ section.settings.title }}</h1>
 
   <button type="button" data-role="none" class="prev-arrow custom-arrow-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa-solid fa-angle-left"></i></button>
   <button type="button" data-role="none" class="next-arrow custom-arrow-next" aria-label="Previous" tabindex="0" role="button"><i class="fa-solid fa-angle-right"></i></button>
@@ -230,6 +230,18 @@ $('.prev-arrow').on('click', function(){
   {
     "name": "Collection Slider",
     "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "default": "Description",
+        "label": "Description"
+      },
          {
           "type": "range",
           "id": "section_width",
