@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "image_with_text_yXKm4i": {
@@ -135,6 +144,8 @@
         "collection_slider_UNCjh4"
       ],
       "settings": {
+        "title": "Browse by Category",
+        "description": "- The Categories",
         "section_width": 100,
         "section_width_mobile": 100,
         "image_width_desktop": 32,
@@ -240,27 +251,27 @@
         "collection_slider_A98BRC": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Icon-fill.png",
-            "cat_title": "sdfsdfsd",
-            "cat_description": "dfsdfasdfsd",
+            "cat_img": "shopify:\/\/shop_images\/Image.png",
+            "cat_title": "Amy Smith",
+            "cat_description": "This is the best website I have ordered something from. I highly recommend.",
             "cat_link": ""
           }
         },
         "collection_slider_MbnCUM": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Profile.svg",
-            "cat_title": "dfdfsdf",
-            "cat_description": "sdfasdfsdfs",
+            "cat_img": "shopify:\/\/shop_images\/image2.jpg",
+            "cat_title": "Elle Fanning",
+            "cat_description": "It retains the essence of your original statement but with a slight tweak",
             "cat_link": ""
           }
         },
         "collection_slider_jhwR4k": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Quality.svg",
-            "cat_title": "edfsdfsd",
-            "cat_description": "sdfasdfsadfsd",
+            "cat_img": "shopify:\/\/shop_images\/image1.jpg",
+            "cat_title": "Natalie Portman",
+            "cat_description": "Great site to order from! I highly recommend it to everyone.",
             "cat_link": ""
           }
         }
@@ -271,6 +282,8 @@
         "collection_slider_jhwR4k"
       ],
       "settings": {
+        "title": "What our Customers are Saying",
+        "description": "- Our Reviews",
         "section_width": 80,
         "section_width_mobile": 100,
         "image_width_desktop": 100,

@@ -439,6 +439,7 @@ text-align: center;
 }
 .review_slider .multicolumn-list .multicolumn-list__item {
     border: 1px dashed green;
+    padding-inline: 23px;
 }
 .review-arrow-prev,
 .review-arrow-next {
@@ -451,14 +452,83 @@ text-align: center;
     /* color: transparent; */
     /* border: 1px solid black !important; */
     border-radius: 50%;
-    border: none !important;
+    border: 2px solid #000000 !important;
     background: #F6F7FB;
 }
 .review_slider_button_container{
     display: flex;
-    justify-content: center;
     gap: 16px;
 }
 .review_slider .slick-dots {
     position: relative !important;
+}
+.review_slider_first_li h5{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 24px;
+    color: #2975FF;
+}
+.review_slider_first_li h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.review-slider_image-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #00CC96;
+    border-radius: 50%;
+}
+.review-slider_image-container img {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 50%;
+}
+.review-slider_image_container{
+    text-align: left;
+}
+.review-slider_image_container p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #1A202C;
+
+}
+.review-slider_image_container h4{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #1A202C;
+}
+.review_slider .slick-dots{
+    text-align: left !important;
+}
+.review_slider .slick-dots li button:before {
+    font-size: 28px !important;
+    color: #00CC96 !important;
+    opacity: 1 !important;
+    /* top: -6.6px;
+    left: -5.4px; */
+
+}
+.review_slider .slick-dots li.slick-active button:before  {
+    font-size: 28px !important;
+    color: #0f4b3b !important;
+
+
+}
+/* .review_slider .slick-dots li button {
+    border: 2px solid #00CC96 !important;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    padding: 0px;
+} */
+li.multicolumn-list__item.grid__item.first_column {
+    display: flex;
+    align-items: center;
 }
