@@ -108,8 +108,23 @@
           {%- if show_badge -%}
             <div class="card__badge {{ settings.badge_position }}">
               <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
-            </div>
-          {%- endif -%}
+              </div>
+            {%- endif -%}
+            
+            {% comment %} Adding Custom Badge for blogs  {% endcomment %}
+            {%- if show_tag_badge -%}
+              <div class="card__badge {{ settings.badge_position }}">
+                {% for tag in article.tags %}
+                  {% if tag == 'Popular' %}
+                    <span class="custom_blog_badge custom_blog_badge_popular badge color-{{ settings.color_schemes | first }}">{{ tag }}</span>
+                  {% elsif tag == 'Recent' %}
+                    <span class="custom_blog_badge custom_blog_badge_recent badge color-{{ settings.color_schemes | first }}">{{ tag }}</span>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {%- endif -%}
+
+
         </div>
       </div>
       <div class="card__content">
@@ -129,7 +144,7 @@
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
+              <p class="article-card__excerpt rte-width {{ color_class }}">
                 {%- if article.excerpt.size > 0 -%}
                   {{ article.excerpt | strip_html | truncatewords: 30 }}
                 {%- else -%}

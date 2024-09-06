@@ -161,7 +161,7 @@
     opacity: 1;
 }
 
-.slick-dots li button:before {
+/* .slick-dots li button:before {
     font-family: 'slick';
     font-size: 6px;
     line-height: 20px;
@@ -176,7 +176,30 @@
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+} */
+.slick-dots li button::before {
+    font-family: 'slick';
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    content: ''; /* No text content, using just CSS */
+    text-align: center;
+    opacity: 0.25;
+    background: #00CC96;
+    border-radius: 50%; /* Make it a circle */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+.slick-dots li.slick-active button::before {
+    opacity: 1;
+    background-color: transparent; /* Transparent background for active */
+    border: 1px solid #00CC96; /* White border for active */
+}
+
 
 .slick-dots li.slick-active button:before {
     opacity: .75;

@@ -50,22 +50,11 @@ section.id
 .content-area {
   text-align: center;
   padding: auto 0;
-
-  padding-top: {
-  {
-  padding_top
-}
 }
 
-px !important;
-
-padding-bottom: {
-{
-padding_bottom
-}
-}
-
-px !important;
+.review_slider.page-width {
+  padding-top: {{ section.settings.padding_top }}px !important;
+  padding-bottom: {{ section.settings.padding-bottom }}px !important;
 }
 
 . {
@@ -218,7 +207,6 @@ px;
 
 .review_slider.page-width {
   position: relative;
-  border: 1px solid;
 }
 </style>
 <link rel="stylesheet" href="{{ 'slick.css' | asset_url }}">
@@ -235,7 +223,7 @@ px;
       </div>
     </li>
 
-    <li class="multicolumn-list__item grid__item">
+    <li class="multicolumn-list__item grid__item second_column">
       <div class="review-slider {{ section.id }}">
         {% for block in section.blocks %}
           <div class="content-area">
