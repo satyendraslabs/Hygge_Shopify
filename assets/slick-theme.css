@@ -179,10 +179,6 @@
 } */
 .slick-dots li button::before {
     font-family: 'slick';
-<<<<<<< HEAD
-=======
-    font-size: 6px;
->>>>>>> origin/dev
     line-height: 20px;
     position: absolute;
     top: 0;
@@ -196,7 +192,6 @@
     border-radius: 50%; /* Make it a circle */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-<<<<<<< HEAD
 }
 
 .slick-dots li.slick-active button::before {
@@ -205,16 +200,6 @@
     border: 1px solid #00CC96; /* White border for active */
 }
 
-=======
-}
-
-.slick-dots li.slick-active button::before {
-    opacity: 1;
-    background-color: transparent; /* Transparent background for active */
-    border: 1px solid #00CC96; /* White border for active */
-}
-
->>>>>>> origin/dev
 
 .slick-dots li.slick-active button:before {
     opacity: .75;

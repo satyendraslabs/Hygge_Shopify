@@ -264,7 +264,8 @@
           <img src="{{ 'Cart.png' | asset_url }}" alt="Menu" class="profile_icon">
           {%- comment -%} render 'icon-cart-empty' {%- endcomment -%}
         {%- else -%}
-          {% render 'icon-cart' %}
+        <img src="{{ 'Cart.png' | asset_url }}" alt="Menu" class="profile_icon">
+          {% comment %} {% render 'icon-cart' %} {% endcomment %}
         {%- endif -%}
         
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>

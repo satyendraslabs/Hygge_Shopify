@@ -11,7 +11,7 @@
         "sticky_header_type": "none",
         "show_line_separator": true,
         "drawer_position": "heading navigation icons",
-        "hover_enable": true,
+        "hover_enable": false,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": false,

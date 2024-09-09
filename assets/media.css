@@ -1,15 +1,5 @@
 
-
-@media screen and (max-width: 749px) {
-    .custom_serives .multicolumn-list.grid--2-col-tablet-down .grid__item {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-    .review_slider .multicolumn-list.grid--2-col-tablet-down .grid__item {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-}
+/* Min-Width */
 @media screen and (min-width: 750px) {
     .image-with-text--overlap .image-with-text__text-item {
         padding: 0px !important;
@@ -25,7 +15,10 @@
         position: absolute !important;
         left: 0px;
     }
-   
+    .footer-block__details-content .list-menu__item--link {
+        padding-bottom: 10px;
+        padding-top: 0.5rem;
+    }
    
    
 }
@@ -42,5 +35,47 @@
     .custom_serives .multicolumn-card__info{
         padding-left: 0px !important;
         padding-right: 0px !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .custom-arrow-prev, .custom-arrow-next {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 750px) {
+    .footer .grid__item {
+      width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2) !important; /* Each item will take 50% width minus the column gap */
+      max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2) !important;
+    }
+  
+    .footer .grid {
+      column-gap: var(--grid-mobile-horizontal-spacing) !important; /* Adjust gap if needed */
+      row-gap: var(--grid-mobile-vertical-spacing) !important;
+    }
+}
+
+/* Max-width */
+@media screen and (max-width: 749px) {
+    .custom_serives .multicolumn-list.grid--2-col-tablet-down .grid__item {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .review_slider .multicolumn-list.grid--2-col-tablet-down .grid__item {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .footer .grid {
+        display: flex !important;
+    }
+    .footer-block.grid__item {
+        margin-bottom: 64px !important;
+        margin-top: 0px !important;
+    }
+}   
+
+/* Media query for max-width:1026px */
+@media screen and (max-width: 1026px) {
+    .footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
+        padding-left: 0px;
     }
 }
