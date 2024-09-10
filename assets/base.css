@@ -108,7 +108,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   padding-right: 3rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .page-width {
     padding: 0 5rem;
   }
@@ -876,7 +876,7 @@ summary::-webkit-details-marker {
   row-gap: var(--grid-mobile-vertical-spacing);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .grid {
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
@@ -932,7 +932,7 @@ summary::-webkit-details-marker {
   width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .grid--2-col .grid__item {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
