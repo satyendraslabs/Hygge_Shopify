@@ -144,10 +144,12 @@
                             srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
                             src="{{ block.settings.image | image_url: width: 760 }}"
                             alt="{{ block.settings.image.alt | escape }}"
+                            class="desktop-logo"
                             loading="lazy"
                             width="{{ block.settings.image.width }}"
                             height="{{ block.settings.image.height }}"
                           >
+                          <img src="{{ 'logo-mobile.png' | asset_url }}" class="footer mobile-logo" alt="{{ logo_alt }}">
                         </div>
                       {%- else -%}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}

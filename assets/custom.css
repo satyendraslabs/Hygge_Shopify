@@ -60,11 +60,12 @@ header-drawer {
 .menu-drawer__menu-item--active:hover {
     background-color: white !important;
 }
-.menu-drawer__menu-item:focus{
+
+.menu-drawer__menu-item:focus {
     background-color: transparent !important;
     color: #00CC96 !important;
-    }
-    
+}
+
 .list-menu>li>a,
 summary {
     font-size: 20px !important;
@@ -140,6 +141,7 @@ sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bott
     border: none !important;
     /* border: 1px solid red; */
 }
+
 .cart-count-bubble {
     background: #FF66A0 !important;
 }
@@ -188,6 +190,7 @@ a.button.button--primary {
     color: #2975FF;
 
 }
+
 .image-with-text__media img {
     top: 18px !important;
     left: 61px !important;
@@ -409,9 +412,6 @@ left: 204px; */
     padding-bottom: 0px !important;
 }
 
-.custom_serives .multicolumn.background-primary .multicolumn-card {
-    /* border: 1px solid red; */
-}
 
 .custom_serives .media.media--transparent.media--adapt {
     width: 64px !important;
@@ -595,7 +595,7 @@ li.multicolumn-list__item.grid__item.first_column {
 /* Blog Page  */
 .article-card__image-wrapper.card__media {
     border-radius: 56px !important;
-}   
+}
 
 .custom_blog_page .article-card__image.media.media--hover-effect,
 .custom_blog_page .card__inner.color-scheme-2.gradient.ratio {
@@ -640,7 +640,7 @@ li.multicolumn-list__item.grid__item.first_column {
 .custom_blog_page .blog__posts.articles-wrapper li {
     padding-right: 28px;
     margin-left: 0px !important;
-}   
+}
 
 .custom_blog_badge {
     padding: 12px 24px 12px 24px;
@@ -752,12 +752,15 @@ li.multicolumn-list__item.grid__item.first_column {
     text-align: left;
     color: #1A202C66;
 }
-.field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label {
+
+.field__input:focus~.field__label,
+.field__input:not(:placeholder-shown)~.field__label {
     font-size: 1rem;
     top: calc(var(--inputs-border-width) + -0.5rem);
     left: calc(var(--inputs-border-width) + 2rem);
     letter-spacing: 0.04rem;
 }
+
 .custom_newsletter h2.inline-richtext.h1 {
     font-size: 40px;
     font-weight: 700;
@@ -773,66 +776,90 @@ li.multicolumn-list__item.grid__item.first_column {
     line-height: 24px;
     text-align: center;
     color: #2975FF;
-    
+
 }
-.custom_newsletter .newsletter__wrapper{
+
+.custom_newsletter .newsletter__wrapper {
     padding-left: 0px !important;
     padding-right: 0px !important;
     background: #F6F7FB;
-border-radius: 56px;
+    border-radius: 56px;
 }
-.custom_newsletter .newsletter-form__field-wrapper{
+
+.custom_newsletter .newsletter-form__field-wrapper {
     max-width: 448px !important;
 }
+
 .footer-block-image {
     flex-wrap: wrap;
     justify-content: left !important;
 }
+
 h2.footer-block__heading.inline-richtext {
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
 }
+
 a.link.link--text.list-menu__item.list-menu__item--link {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
+
 .footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
     /* border: 1px solid; */
     padding-left: 70px;
 }
+
 .footer-block.grid__item.scroll-trigger.animate--slide-in {
     border: 1px solid white;
 }
-.footer{
-    border:none !important;
+
+.footer {
+    border: none !important;
 }
-.footer__content-bottom-wrapper{
+
+.footer__content-bottom-wrapper {
     display: none;
 }
+
 .footer__content-bottom.scroll-trigger.animate--slide-in {
     display: none;
 }
-.footer-block__details-content p{
+
+.footer-block__details-content p {
     text-align: left;
 }
-.collection-slider.template--17668769808574__collection_slider_B6RBy9.slick-initialized.slick-slider {
-    /* border: 1px solid; */
-}
-.multicolumn-list__item {
-    /* border: 1px solid; */
-  }
-  .collection .grid--4-col-desktop .grid__item {
+
+.collection .grid--4-col-desktop .grid__item {
     padding-right: 24px;
 }
+
 .image-with-text .grid__item {
     /* border: 1px solid; */
 }
+
 li.list-social__item {
     border-radius: 50%;
     background: #F6F7FB;
 }
+
 .list-social {
     gap: 16px;
+}
+
+.mobile-logo {
+    display: none !important;
+}
+
+.desktop-localization-wrapper {
+    display: none !important;
+}
+img.footer.mobile-logo {
+    width: 72px;
+    height: 32px;
+}
+.footer-block__details-content p {
+    margin-top: 0px !important;
 }

@@ -317,7 +317,7 @@ slider-component.slider-component-full-width {
   justify-content: center;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 550px) {
   .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
     display: none;
   }

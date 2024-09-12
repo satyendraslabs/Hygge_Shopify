@@ -308,6 +308,96 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    {% comment %} Moving Search Icon to Menu Drawer {% endcomment %}
+    <script type="text/javascript">
+    window.addEventListener("load", () => {
+      const menu = document.querySelector("#menu-drawer");
+      const search = document.querySelector("details-modal");
+      const originalSearchPosition = search.parentNode; // Store the original position of the search element
+      const wishlist = document.querySelector("#dawn-desktop");
+  
+      function moveSearchIcon() {
+        if (document.body.clientWidth <= 750) {
+          // Move the search icon to the menu drawer
+          if (search && menu && !menu.querySelector("nav").contains(search)) {
+            menu.querySelector("nav").prepend(search);
+            Object.assign(search.style, {
+              display: "inline-flex",
+              position: "relative",
+              width: "100%"
+            });
+  
+            // Additional styles for the search icon can be handled here if needed
+            // e.g., search.querySelector(".search-modal__close-button").style.display = "none";
+            // e.g., search.querySelector(".modal-overlay").style.display = "none";
+            // e.g., search.querySelector("details").setAttribute("open", "");
+          }
+          
+          if (wishlist) {
+            menu.querySelector(".menu-drawer__account").insertAdjacentElement("afterend", wishlist);
+          }
+        } else {
+          // Move the search icon back to its original position
+          if (search && originalSearchPosition && !originalSearchPosition.contains(search)) {
+            originalSearchPosition.prepend(search);
+            search.removeAttribute("style"); // Remove inline styles
+            
+            // Restore any styles or attributes if needed
+            // e.g., search.querySelector(".search-modal__close-button").style.display = "";
+            // e.g., search.querySelector(".modal-overlay").style.display = "";
+            // e.g., search.querySelector("details").removeAttribute("open");
+          }
+        }
+      }
+  
+      // Initial call on load
+      moveSearchIcon();
+  
+      // Add event listener for window resize
+      window.addEventListener("resize", moveSearchIcon);
+    });
+  </script>
+  
+  
+  <script type="text/javascript">
+  // window.addEventListener("load", () => {
+  //   const search = document.querySelector("details-modal");
+
+  //   function ensureSearchInputOpen() {
+  //     if (document.body.clientWidth <= 750) {
+  //       if (search) {
+  //         // Open the search input if it's not already open
+  //         const detailsElement = search.querySelector("details");
+  //         if (!detailsElement.hasAttribute("open")) {
+  //           detailsElement.setAttribute("open", "");
+  //         }
+  //       }
+  //     }
+  //     // No need to close the search input if viewport width > 750px
+  //   }
+
+  //   // Initial call on load
+  //   ensureSearchInputOpen();
+
+  //   // Add event listener for window resize
+  //   window.addEventListener("resize", ensureSearchInputOpen);
+  // });
+</script>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
