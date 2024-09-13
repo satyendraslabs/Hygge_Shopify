@@ -343,30 +343,53 @@ items.forEach(item => {
 
 {% comment %} Margin-Right on Hover Menu Items  {% endcomment %}
 <script>
-  const listItem = document.querySelector('#HeaderDrawer-categories');
-  const menuBar = document.querySelector('.menu-drawer__menu');
-  const submenu = document.querySelector('.menu-drawer__submenu');
-  function addMargin() {
+ const listItem = document.querySelector('#HeaderDrawer-categories');
+const menuBar = document.querySelector('.menu-drawer__menu');
+const submenu = document.querySelector('.menu-drawer__submenu');
+const menuItem2 = document.querySelector('#Details-menu-drawer-menu-item-2');
+
+// Function to add margin based on screen size
+function addMargin() {
+  if (window.innerWidth > 750) { // Check if the screen width is greater than 750px
     menuBar.style.marginRight = '15%';
   }
-  function removeMargin() {
-    if (!listItem.matches(':hover') && !submenu.matches(':hover')) {
-      menuBar.style.marginRight = '';
-    }
+}
+
+// Function to remove margin
+function removeMargin() {
+  if (window.innerWidth > 750 && !listItem.matches(':hover') && !submenu.matches(':hover')) {
+    menuBar.style.marginRight = '';
   }
-  {%- if section.settings.hover_enable -%}
-  listItem.addEventListener('mouseover', addMargin);
-  listItem.addEventListener('mouseout', removeMargin);
-  submenu.addEventListener('mouseover', addMargin);
-  submenu.addEventListener('mouseout', removeMargin);
-  {%- endif -%}
-  listItem.addEventListener('click', function() {
+}
+
+// Check if hover functionality is enabled
+{%- if section.settings.hover_enable -%}
+listItem.addEventListener('mouseover', addMargin);
+listItem.addEventListener('mouseout', removeMargin);
+submenu.addEventListener('mouseover', addMargin);
+submenu.addEventListener('mouseout', removeMargin);
+{%- endif -%}
+
+// Toggle the margin-right on click, only for devices greater than 750px
+listItem.addEventListener('click', function() {
+  if (window.innerWidth > 750) {
     if (menuBar.style.marginRight === '15%') {
       menuBar.style.marginRight = '';
     } else {
       menuBar.style.marginRight = '15%';
     }
+  }
+});
+
+// For devices less than 750px: Toggle 'active' class on '.menu-item' when clicking on '#Details-menu-drawer-menu-item-2'
+if (window.innerWidth <= 750) {
+  menuItem2.addEventListener('click', function() {
+    document.querySelectorAll('#Details-menu-drawer-menu-item-2').forEach(item => {
+      item.classList.toggle('active'); // Toggle 'active' class
+    });
   });
+}
+
 </script>
 
 

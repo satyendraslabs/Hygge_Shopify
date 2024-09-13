@@ -21,7 +21,13 @@
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
+
+
           <nav class="menu-drawer__navigation">
+
+        {% comment %} Add Custom header search for mobile {% endcomment %}
+        {% render 'custom-header-search-mobile', input_id: 'Search-In-Modal', device: 'mobile' %}
+        
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>
@@ -132,7 +138,7 @@
                 href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
                 class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
               >
-                {%- if section.settings.enable_customer_avatar -%}
+                {% comment %} {%- if section.settings.enable_customer_avatar -%}
                   <account-icon>
                     {%- if customer and customer.has_avatar? -%}
                       {{ customer | avatar }}
@@ -149,7 +155,8 @@
                   else
                     echo 'customer.log_in' | t
                   endif
-                -%}
+                -%} {% endcomment %}
+                 Login
               </a>
             {%- endif -%}
             {%- if localization.available_countries or localization.available_languages -%}
