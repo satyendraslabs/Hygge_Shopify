@@ -105,8 +105,20 @@
                     </h2>
                   </a>
                 </div>
+
+                
+
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }} class="product-page-collection_title-price">
+               
+               
+                {% for collection in product.collections %}
+                    {% unless collection.title == "Featured Products" %}
+                    <p class="collection-title-product-page color-0">{{ collection.title }}</p>
+                    {% break %}
+                  {% endunless %}
+                    {% endfor %}
+
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -207,7 +219,7 @@
                   id="Sku-{{ section.id }}"
                   role="status"
                   {{ block.shopify_attributes }}
-                >
+                ><span class="sku_heading">SKU:</span> 
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
@@ -260,7 +272,8 @@
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                         </span>
-                        {% render 'icon-minus' %}
+                        {% comment %} {% render 'icon-minus' %} {% endcomment %}
+                        <i class="fa-solid fa-angle-left"></i>
                       </button>
                       <input
                         class="quantity__input"
@@ -282,7 +295,8 @@
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                         </span>
-                        {% render 'icon-plus' %}
+                        {% comment %} {% render 'icon-plus' %} {% endcomment %}
+                        <i class="fa-solid fa-angle-right"></i>
                       </button>
                     </quantity-input>
                     {%- liquid

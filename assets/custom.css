@@ -869,3 +869,201 @@ img.footer.mobile-logo {
 details#Details-menu-drawer-menu-item-2 {
     position: relative;
 }
+
+
+/* ========================>Product Page<=========================== */
+
+
+@media (min-width: 1024px) {
+    .product--thumbnail_slider {
+        position: relative;
+    }
+
+    .product--thumbnail_slider media-gallery {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .product--thumbnail_slider .slider-mobile-gutter:not(.thumbnail-slider) {
+        width: calc(100% - 100px);
+    }
+
+    .product--thumbnail_slider .thumbnail-slider {
+        max-width: 22%;
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    .product--thumbnail_slider .slider-button {
+        display: none !important;
+    }
+
+    .product--thumbnail_slider .thumbnail-slider .thumbnail-list.slider--tablet-up {
+        padding: 0;
+        display: flex !important;
+        gap: 24px;
+        flex-direction: column;
+        display: block;
+    }
+
+    .product--thumbnail_slider .thumbnail-slider .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .product--thumbnail_slider .thumbnail-slider {
+        align-items: flex-start !important;
+        margin-right: 24px;
+    }
+}
+
+/* Product Badge */
+.sale-badge {
+    position: absolute;
+    top: 0;
+    overflow: visible !important;
+    right: 0;
+    z-index: 10;
+}
+
+.sale-badge h1 {
+    color: white;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 12px;
+    background: #fc030b;
+    width: fit-content;
+    float: right;
+    margin: 16px 20px;
+}
+
+.product .thumbnail[aria-current] {
+    box-shadow: none !important;
+    border: 2px solid #00CC96 !important;
+    border-radius: 32px;
+}
+
+.product .thumbnail[aria-current]:focus:not(:focus-visible) {
+    box-shadow: none !important;
+}
+
+.product--thumbnail_slider .thumbnail-slider .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+    background: #F6F7FB;
+    border-radius: 32px;
+}
+
+.global-media-settings {
+    border: none !important;
+}
+
+.product-media-container.constrain-height .media img {
+    background: #F6F7FB;
+    border-radius: 64px;
+    border: none;
+}
+
+.product-media-container .product__modal-opener {
+    border: 2px dashed blue;
+}
+
+.product-badge {
+    padding: 12px 32px 12px 32px;
+    border-radius: 32px;
+    position: absolute;
+    top: 26px;
+    right: -25px;
+}
+
+.product-media-container.constrain-height .media {
+    overflow: visible !important;
+}
+
+.product__media-icon,
+.thumbnail__badge {
+    right: 4.0rem !important;
+    bottom: 4.0rem !important;
+    left: unset !important;
+    top: unset !important
+}
+
+.product-page-collection_title-price {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.badge.price__badge-sale {
+    display: none !important;
+}
+
+.product .product__text {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 24px;
+    color: #2975FF;
+}
+
+.product .product__title h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: left;
+}
+
+.product .price .price-item {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #1A202C;
+}
+
+.collection-title-product-page {
+    padding: 12px 32px 12px 32px;
+    gap: 10px;
+    border-radius: 32px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+}
+
+.product__info-container .price--on-sale .price-item--regular {
+    font-size: 20px !important;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.sku_heading {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #1A202C66;
+}
+
+.product__sku {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #1A202C;
+}
+.product-form__submit {
+    padding: 16px 40px 16px 40px;
+    border-radius: 32px;
+    background: #00CC96;
+font-size: 20px;
+font-weight: 700;
+line-height: 32px;
+}
+.product-form__quantity .form__label{
+    display: none;
+}
+.price-per-item__container{
+    --color-foreground:none !important;
+}
+.price-per-item__container .quantity{
+    border: 2px solid #F6F7FB;
+    border-radius: 32px;
+}

@@ -124,21 +124,8 @@
       </small>
     </div>
     {%- if show_badges -%}
-
-
- <!--------------- Start of Save Amount Code --------------->
-
-
-
-{%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-  <p class="product-savings-amount">YOU SAVE {{  product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</p>
- {%- endif -%}
- 
- 
-  <!--------------- End of Save Amount Code --------------->
- 
-     {% comment %} <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}"> {% endcomment %}
-        {% comment %} {{ 'products.product.on_sale' | t }} {% endcomment %}
+      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+        {{ 'products.product.on_sale' | t }}
       </span> 
 
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">

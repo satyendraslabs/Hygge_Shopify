@@ -74,6 +74,15 @@
     </span>
     {%- render 'loading-spinner' -%}
     <div class="product__media media media--transparent">
+
+      {% comment %} Adding Sale Badge On Product Image {% endcomment %}
+      {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+        {% assign price_difference = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price %}
+        {% assign discount_percentage = price_difference | times: 100 | divided_by: product.selected_or_first_available_variant.compare_at_price %}
+        <div class="sale-badge"> <p class="savings-amount product-badge">{{ discount_percentage | round }}% OFF</p></div> 
+       {%- endif -%}
+      {% comment %}{% endcomment %}
+
       {{
         media.preview_image
         | image_url: width: 1946
