@@ -101,11 +101,21 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+
+          
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
-        </div>
+          </div>
+
       {%- endform -%}
+               {% comment %} Wishlisht Button {% endcomment %}
+               {% if settings.enable-wishlist %}
+                <button onclick="toggleWishlist()" class="wishlist_button">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              {% endif %}
+              {% comment %} Wishlisht Button {% endcomment %}
     </product-form>
   {%- else -%}
     <div class="product-form">
@@ -154,4 +164,5 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
+   
 </div>
