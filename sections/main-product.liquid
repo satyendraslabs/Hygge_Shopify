@@ -272,8 +272,7 @@
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                         </span>
-                        {% comment %} {% render 'icon-minus' %} {% endcomment %}
-                        <i class="fa-solid fa-angle-left"></i>
+                        {% render 'icon-minus' %}
                       </button>
                       <input
                         class="quantity__input"
@@ -295,8 +294,7 @@
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                         </span>
-                        {% comment %} {% render 'icon-plus' %} {% endcomment %}
-                        <i class="fa-solid fa-angle-right"></i>
+                        {% render 'icon-plus' %}
                       </button>
                     </quantity-input>
                     {%- liquid
@@ -383,6 +381,16 @@
                         {%- endif -%}
                       </price-per-item>
                     {%- endif -%}
+
+                {% comment %} ========>Moved Buy Button To Quantity Selector Page<=========== {% endcomment %}
+                    {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
+
                   </div>
                   <div class="quantity__rules caption" id="Quantity-Rules-{{ section.id }}">
                     {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
@@ -478,13 +486,16 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
+
+                {% comment %} ========>Moved Buy Button From Here To Quantity Selector Page<=========== {% endcomment %}
+
+                {% comment %} {%- render 'buy-buttons',
                   block: block,
                   product: product,
                   product_form_id: product_form_id,
                   section_id: section.id,
                   show_pickup_availability: true
-                -%}
+                -%} {% endcomment %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
