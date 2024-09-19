@@ -34,17 +34,15 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
     data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
     data-section-id="{{ section.id }}" data-product-id="{{ product.id }}">
 
-
-    <button type="button" data-role="none" class="custom-related-product-prev custom-arrow-prev" aria-label="Previous" tabindex="0"
-    role="button"><i class="fa-solid fa-angle-left"></i></button>
-  <button type="button" data-role="none" class="custom-related-product-next custom-arrow-next" aria-label="Previous" tabindex="0"
-    role="button"><i class="fa-solid fa-angle-right"></i></button>
-
-    
-    {% comment %} Added Description {% endcomment %}
-    <div class="custom_services_description">{{ section.settings.description }}</div>
-
     {% if recommendations.performed and recommendations.products_count > 0 %}
+
+      <button type="button" data-role="none" class="custom-related-product-prev custom-arrow-prev" aria-label="Previous" tabindex="0"
+      role="button"><i class="fa-solid fa-angle-left"></i></button>
+    <button type="button" data-role="none" class="custom-related-product-next custom-arrow-next" aria-label="Previous" tabindex="0"
+      role="button"><i class="fa-solid fa-angle-right"></i></button>
+      
+         {% comment %} Added Description {% endcomment %}
+    <div class="custom_services_description">{{ section.settings.description }}</div>
     <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
       {{ section.settings.heading }}
     </h2>
@@ -115,7 +113,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
             },
           },
           {
-            breakpoint: 360,
+            breakpoint: 560,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,

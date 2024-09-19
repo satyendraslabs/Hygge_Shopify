@@ -241,32 +241,32 @@
         "padding_bottom": 36
       }
     },
-    "custom_newsletter_tVYjUL": {
-      "type": "custom-newsletter",
+    "custom_product_newsletter_WePYJV": {
+      "type": "custom-product-newsletter",
       "blocks": {
-        "paragraph_Q6n9WD": {
+        "paragraph_aAmykY": {
           "type": "paragraph",
           "settings": {
             "text": "<p>- Our Newsletter<\/p>"
           }
         },
-        "heading_zpKybB": {
+        "heading_X9k9aD": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "Sign Up to our Newsletter",
             "heading_size": "h1"
           }
         },
-        "email_form_MHPzXx": {
+        "email_form_fUEjjT": {
           "type": "email_form",
           "settings": {
           }
         }
       },
       "block_order": [
-        "paragraph_Q6n9WD",
-        "heading_zpKybB",
-        "email_form_MHPzXx"
+        "paragraph_aAmykY",
+        "heading_X9k9aD",
+        "email_form_fUEjjT"
       ],
       "settings": {
         "color_scheme": "",
@@ -282,6 +282,6 @@
     "related-products",
     "review_slider_AErYD3",
     "custom_related_products_CPTthF",
-    "custom_newsletter_tVYjUL"
+    "custom_product_newsletter_WePYJV"
   ]
 }

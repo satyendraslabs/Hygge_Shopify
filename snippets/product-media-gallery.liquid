@@ -128,11 +128,12 @@
     <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
       <button
         type="button"
-        class="slider-button slider-button--prev"
+        class="productpage-slider-button slider-button slider-button--prev"
         name="previous"
         aria-label="{{ 'general.slider.previous_slide' | t }}"
       >
         {% render 'icon-caret' %}
+        {% comment %} <i class="fa-solid fa-angle-left"></i> {% endcomment %}
       </button>
       <div class="slider-counter caption">
         <span class="slider-counter--current">1</span>
@@ -142,11 +143,12 @@
       </div>
       <button
         type="button"
-        class="slider-button slider-button--next"
+        class="productpage-slider-button slider-button slider-button--next"
         name="next"
         aria-label="{{ 'general.slider.next_slide' | t }}"
       >
         {% render 'icon-caret' %}
+        {% comment %} <i class="fa-solid fa-angle-right"></i> {% endcomment %}
       </button>
     </div>
   </slider-component>

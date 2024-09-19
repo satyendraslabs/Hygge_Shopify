@@ -9,7 +9,7 @@
 
 {%- endstyle -%}
 
-<div class="custom_newsletter newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+<div class="productpage_newsletter custom_newsletter newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   <div class="newsletter__wrapper page-width color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -117,7 +117,7 @@
 
 {% schema %}
 {
-  "name": "HomePage Newsletter",
+  "name": "ProductPage Newsletter",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -231,7 +231,7 @@
   ],
   "presets": [
     {
-      "name": "Custom HomePage Newsletter",
+      "name": "Custom ProductPage Newsletter",
       "blocks": [
         {
           "type": "heading"

@@ -150,12 +150,18 @@
                 {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
               "
             >
+
+                 {% comment %} Adding color classes to products {% endcomment %}
+        {% assign color_classes = "yellow,green,blue,red,orange,purple,pink,brown" | split: "," %}
+        {% assign color_index = 0 %}
+
               {% assign skip_card_product_styles = false %}
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
+
                 <li
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
@@ -163,6 +169,9 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+
+                {% assign color_class = "color-" | append: color_index %}
+
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -173,8 +182,10 @@
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
                     quick_add: section.settings.quick_add,
-                    section_id: section.id
+                    section_id: section.id,
+                    color_class: color_class
                   %}
+                  {% assign color_index = color_index | plus: 1 %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}
