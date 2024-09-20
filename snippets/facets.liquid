@@ -320,9 +320,9 @@
                       open
                     {% endif %}
                   >
-                    <summary class="facets__summary caption-large focus-offset">
+                    <summary class="category_price_filter facets__summary caption-large focus-offset">
                       <div>
-                        <span>{{ filter.label | escape }}</span>
+                        <span>{{ filter.label | escape }} Range</span>
                         {% render 'icon-caret' %}
                       </div>
                     </summary>
@@ -401,7 +401,7 @@
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
                 <h2 class="facet-filters__label caption-large text-body">
-                  <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+                  <label for="SortBy" class="facet-filters__label-clickable">{{ 'products.facets.sort_by_label' | t }}</label>
                 </h2>
                 <div class="select">
                   {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
@@ -411,11 +411,12 @@
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >
+                  <option value="volvo" selected="selected">Sort By</option>
                     {%- for option in results.sort_options -%}
                       <option
                         value="{{ option.value | escape }}"
                         {% if option.value == sort_by %}
-                          selected="selected"
+                          {% comment %} selected="selected" {% endcomment %}
                         {% endif %}
                       >
                         {{ option.name | escape }}
@@ -425,6 +426,7 @@
                   {% render 'icon-caret' %}
                 </div>
               </div>
+              
             </div>
           {%- endif -%}
           <div class="product-count light" role="status">
@@ -456,10 +458,12 @@
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
-          {% render 'icon-filter' %}
+          {% comment %} {% render 'icon-filter' %} {% endcomment %}
           <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
-              {{ 'products.facets.filter_and_sort' | t }}
+              {% comment %} {{ 'products.facets.filter_and_sort' | t }} {% endcomment %}
+                Filter By
+                {% render 'icon-caret' %}
             {%- elsif enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
             {%- elsif enable_sorting -%}
