@@ -7,19 +7,78 @@
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "custom_contact_page_form_y76Yjt": {
+      "type": "custom-contact-page-form",
+      "blocks": {
+        "column_xT4Xxk": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_xT4Xxk"
+      ],
       "settings": {
-        "heading": "",
+        "title": "Please fill out the contact form",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "description": "<p>- Reach Out to Us<\/p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_product_newsletter_E8trQX": {
+      "type": "custom-product-newsletter",
+      "blocks": {
+        "paragraph_Pb6JcU": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>- Our Newsletter<\/p>"
+          }
+        },
+        "heading_4x3prG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign Up to our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_pPPbcE": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_Pb6JcU",
+        "heading_4x3prG",
+        "email_form_pPPbcE"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "custom_contact_page_form_y76Yjt",
+    "custom_product_newsletter_E8trQX"
   ]
 }

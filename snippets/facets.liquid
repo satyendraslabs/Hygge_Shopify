@@ -406,22 +406,23 @@
                 <div class="select">
                   {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
                   <select
-                    name="sort_by"
-                    class="facet-filters__sort select__select caption-large"
-                    id="SortBy"
-                    aria-describedby="a11y-refresh-page-message"
+                  name="sort_by"
+                  class="facet-filters__sort select__select caption-large"
+                  id="SortBy"
+                  aria-describedby="a11y-refresh-page-message"
                   >
+                  {% comment %} Added Sort By Option {% endcomment %}
                   <option value="volvo" selected="selected">Sort By</option>
-                    {%- for option in results.sort_options -%}
-                      <option
-                        value="{{ option.value | escape }}"
-                        {% if option.value == sort_by %}
-                          {% comment %} selected="selected" {% endcomment %}
-                        {% endif %}
-                      >
-                        {{ option.name | escape }}
-                      </option>
-                    {%- endfor -%}
+                  {%- for option in results.sort_options -%}
+                  <option
+                  value="{{ option.value | escape }}"
+                  {% if option.value == sort_by %}
+                  {% comment %} selected="selected" {% endcomment %}
+                  {% endif %}
+                  >
+                  {{ option.name | escape }}
+                  </option>
+                  {%- endfor -%}
                   </select>
                   {% render 'icon-caret' %}
                 </div>
@@ -462,7 +463,7 @@
           <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
               {% comment %} {{ 'products.facets.filter_and_sort' | t }} {% endcomment %}
-                Filter By
+                Filter
                 {% render 'icon-caret' %}
             {%- elsif enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
@@ -485,7 +486,8 @@
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
                   {%- if enable_filtering and enable_sorting -%}
-                    {{ 'products.facets.filter_and_sort' | t }}
+                    {% comment %} {{ 'products.facets.filter_and_sort' | t }} {% endcomment %}
+                      Filter
                   {%- elsif enable_filtering -%}
                     {{ 'products.facets.filter_button' | t }}
                   {%- elsif enable_sorting -%}
@@ -852,22 +854,23 @@
             <div class="select">
               {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
               <select
-                name="sort_by"
-                class="facet-filters__sort select__select caption-large"
-                id="SortBy"
-                aria-describedby="a11y-refresh-page-message"
-              >
-                {%- for option in results.sort_options -%}
-                  <option
-                    value="{{ option.value | escape }}"
-                    {% if option.value == sort_by %}
-                      selected="selected"
-                    {% endif %}
-                  >
-                    {{ option.name | escape }}
-                  </option>
-                {%- endfor -%}
-              </select>
+              name="sort_by"
+              class="facet-filters__sort select__select caption-large"
+              id="SortBy"
+              aria-describedby="a11y-refresh-page-message"
+            >
+            <option value="volvo" selected="selected">Sort By</option>
+              {%- for option in results.sort_options -%}
+                <option
+                  value="{{ option.value | escape }}"
+                  {% if option.value == sort_by %}
+                    {% comment %} selected="selected" {% endcomment %}
+                  {% endif %}
+                >
+                  {{ option.name | escape }}
+                </option>
+              {%- endfor -%}
+            </select>
               {% render 'icon-caret' %}
             </div>
           </div>
@@ -884,6 +887,8 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
+
+  
   <div
     class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
     role="status"
@@ -904,6 +909,10 @@
     </h2>
     {%- render 'loading-spinner' -%}
   </div>
+
+
+
+
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">
@@ -947,3 +956,45 @@
     </facet-filters-form>
   {%- endif -%}
 </div>
+
+{% comment %} Added Script for Sort By {% endcomment %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('SortBy');
+    
+    // Function to get the URL parameter by name
+    function getURLParameter(name) {
+        return new URLSearchParams(window.location.search).get(name);
+    }
+
+    // Get the current sorting option from the URL
+    const currentSort = getURLParameter('sort_by');
+    console.log(currentSort);
+
+    if (currentSort) {
+        // Loop through options and set the selected attribute for the matching option
+        Array.from(selectElement.options).forEach(option => {
+            if (option.value === currentSort) {
+                // Add a custom class or style to mark it blue
+                option.style.background = '#2a5ebe'; 
+                option.style.color = '#FFFFFF';
+            }
+        });
+    } else {
+        // If no sort_by in URL, default to "Sort By"
+        selectElement.selectedIndex = 0; 
+    }
+
+    // Add an event listener to trigger URL change and reload on selection change
+    selectElement.addEventListener('change', function() {
+        const selectedValue = selectElement.value;
+
+        // Update the URL with the selected sort option and reload the page
+        const url = new URL(window.location.href);
+        url.searchParams.set('sort_by', selectedValue);
+
+        // Reload the page with the new sorting parameter
+        window.location.href = url.toString();
+    });
+});
+</script>
