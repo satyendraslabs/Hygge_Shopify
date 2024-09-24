@@ -1418,8 +1418,6 @@ div#FacetsWrapperDesktop {
    =============== Contact Page ==============
    ============================================ */
 
-
-
 #custom-contact-form .form-group {
   margin-bottom: 48px;
 }
@@ -1427,11 +1425,11 @@ div#FacetsWrapperDesktop {
 #custom-contact-form .form-group label {
   display: block;
   margin-bottom: 5px;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: black;
 }
 
 #custom-contact-form .form-control {
@@ -1462,13 +1460,13 @@ color: black;
   border: none;
   color: white;
   cursor: pointer;
-padding: 16px 40px 16px 40px;
-border-radius: 32px;
-background: #00CC96;
-font-size: 20px;
-font-weight: 700;
-line-height: 32px;
-text-align: center;
+  padding: 16px 40px 16px 40px;
+  border-radius: 32px;
+  background: #00CC96;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
@@ -1485,46 +1483,202 @@ text-align: center;
   }
 }
 
-.page-width.section-template--17668770037950__custom_contact_page_form_y76Yjt-padding.isolate.scroll-trigger.animate--slide-in {
-  border: 1px solid;
+.custom-contact-page-form {
+  padding-bottom: 144px;
 }
+
 .custom-contact-page-form .custom-product-first-column {
-  border: 1px solid;
   width: 50% !important;
   padding-right: 30px;
 }
 
-
 .custom-contact-page-form .slider-mobile-gutter {
-  border: 1px solid;
   width: 50%;
   padding-left: 38px;
 }
-.custom-contact-page-form h2{
-font-size: 40px;
-font-weight: 700;
-line-height: 56px;
-text-align: left;
-color: #1A202C;
+
+.custom-contact-page-form h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  color: #1A202C;
 }
+
 form#custom-contact-form {
   padding-top: 32px;
 }
+
 .custom-contact-page-form :focus-visible {
   outline: none;
   box-shadow: none;
 }
-#custom-contact-form select{
-  color:#1A202C66;
+
+#custom-contact-form select {
+  color: #1A202C66;
 
 }
+
 .custom-contact-page-form .page-width {
   padding-inline: 84px !important;
   display: flex;
 }
+
 .custom-contact-page-form .custom_services_description {
   text-align: left;
 }
-.custom-contact-page-form  .multicolumn__title {
- padding-inline: 0px !important;
+
+.custom-contact-page-form .multicolumn__title {
+  padding-inline: 0px !important;
+}
+
+.custom-contact-page .custom_services_description {
+  text-align: left;
+}
+
+.custom-contact-page h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  max-width: 504px;
+}
+
+.custom-contact-page .multicolumn-card__info h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.custom-contact-page .multicolumn-card__info {
+  padding: 0px !important;
+  padding-right: 30px !important;
+}
+
+.custom-contact-page .multicolumn__title,
+.custom-contact-page .multicolumn-list:not(.slider) {
+  padding-inline: 0px;
+}
+
+.custom-contact-page {
+  padding-top: 22px;
+  padding-bottom: 144px;
+}
+
+.page-title {
+  display: none !important
+}
+
+.custom-contact-page .title-wrapper-with-link {
+  margin-bottom: 144px !important;
+}
+
+.custom-contact-page .rte p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.custom-contact-page-form .custom_services_description p {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+button#checkout {
+  padding: 16px 40px 16px 40px;
+  border-radius: 32px;
+  background: #00CC96;
+}
+
+
+/* ============================================
+   =============== Create Account Page ==============
+   ============================================ */
+
+.create-account-description {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #2975FF;
+}
+
+.create-account-description p {
+  margin-block: 0px;
+}
+
+.create-account-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  color: #1A202C;
+  margin-top: 8px;
+}
+
+.create-account.page-width {
+  margin-top: 38px;
+}
+
+form#create_customer .create-account-labels {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 16px;
+  color: #1A202C;
+
+}
+
+form#create_customer input {
+  border: 2px solid #F6F7FB;
+  border-radius: 32px;
+  margin-bottom: 48px;
+  padding: 30px;
+}
+
+.field:after,
+.customer .field:after,
+.customer select:after {
+  box-shadow: none !important;
+}
+
+.create-account-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-account-buttons button {
+  padding: 16px 30px 16px 30px;
+  gap: 10px;
+  border-radius: 32px;
+  background: #00CC96;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.customer button {
+  margin: 0px !important;
+}
+
+.create-account-login-button a {
+  width: 236px;
+  padding: 16px 40px 16px 40px;
+  gap: 10px;
+  border-radius: 32px;
+  border: 2px solid #F6F7FB;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.customer button {
+  --border-opacity: none !important;
 }

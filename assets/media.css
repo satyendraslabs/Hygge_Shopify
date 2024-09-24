@@ -80,6 +80,9 @@
     .custom_newsletter .newsletter__wrapper {
         padding-block: 96px !important;
     }
+    .customer:not(.account):not(.order) {
+        max-width: 526px !important;
+    }
 
 
 }
@@ -157,6 +160,9 @@
     .price-per-item__container {
         flex-direction: column;
     }
+    .custom-contact-page .multicolumn-card__info {
+        padding-right: 0px !important;
+      }
 }
 
 /* Media query for max-width:1026px */
@@ -586,27 +592,34 @@
     .page-width.breadcrumbs {
         display: none;
     }
+
     .footer__content-top.page-width {
         padding-bottom: 0px !important;
     }
+
     div#FacetsWrapperDesktop {
         display: none;
     }
+
     .product-count.light.medium-hide.large-up-hide {
         display: none !important;
     }
+
     span.mobile-facets__open-label.button-label.small-hide {
         display: none;
     }
+
     .active-facets.active-facets-mobile.medium-hide.large-up-hide {
         display: none !important;
     }
+
     #MainContent .facets-container.scroll-trigger.animate--fade-in {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-      }
-      span.mobile-facets__open-label.button-label.medium-hide.large-up-hide {
+    }
+
+    span.mobile-facets__open-label.button-label.medium-hide.large-up-hide {
         margin-bottom: 0px !important;
         padding: 16px 0px 16px 20px !important;
         border-radius: 32px !important;
@@ -618,50 +631,81 @@
         max-width: 165px;
         width: 100%;
     }
+
     .facets__form {
         gap: 0 !important;
     }
+
     menu-drawer.mobile-facets__wrapper.medium-hide.large-up-hide {
         max-width: 176px;
         width: 100%;
     }
+
     #MainContent .mobile-facets__open-label svg.icon.icon-caret {
         right: calc(var(--inputs-border-width) + 1.5rem) !important;
         height: 0.9rem !important;
         top: calc(50% - 0.5rem) !important;
     }
+
     facet-filters-form.facets.small-hide {
         align-content: center;
     }
-    .mobile-facets__summary .mobile-facets__sort{
+
+    .mobile-facets__summary .mobile-facets__sort {
         display: none;
     }
+
     aside#main-collection-filters {
         padding-block: 64px;
     }
+
     #ProductGridContainer {
         margin-bottom: 80px;
     }
+
     .custom-contact-page-form .page-width {
         flex-direction: column;
     }
+
     .custom-contact-page-form .custom-product-first-column {
         width: 100% !important;
     }
+
     .custom-contact-page-form .slider-mobile-gutter {
         width: 100%;
     }
+
     .custom-contact-page-form .page-width {
         padding-inline: 40px !important;
     }
+
     .custom-contact-page-form .slider-mobile-gutter {
         padding-left: 0px;
     }
+
     .custom-contact-page-form h2 {
         font-size: 32px;
     }
+
     .custom-contact-page-form .custom-product-first-column {
         padding-right: 0px;
+    }
+
+    .custom-contact-page .multicolumn__title,
+    .custom-contact-page .multicolumn-list:not(.slider) {
+        row-gap: 64px;
+    }
+
+    .custom-contact-page .title-wrapper-with-link {
+        margin-bottom: 112px !important;
+    }
+
+    .custom-contact-page {
+        padding-bottom: 112px;
+    }
+
+    .custom-contact-page-form {
+        padding-bottom: 112px;
     }
 }
 
@@ -750,12 +794,56 @@
     .js details[open]>.menu-drawer__submenu {
         transition: none !important;
     }
+
     .footer-block.grid__item {
         margin-bottom: 56px !important;
     }
+
     .footer-block__details-content {
         margin-bottom: 0px !important;
     }
+}
+
+/* Media query for max-width:749px */
+@media screen and (max-width: 749px) {
+    .custom_serives .multicolumn-list.grid--2-col-tablet-down .grid__item {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .review_slider .multicolumn-list.grid--2-col-tablet-down .grid__item {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .footer .grid {
+        display: flex !important;
+    }
+
+    .footer-block.grid__item {
+        margin-bottom: 64px !important;
+        margin-top: 0px !important;
+    }
+
+    .footer .grid__item {
+        width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2) !important;
+        /* Each item will take 50% width minus the column gap */
+        max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2) !important;
+    }
+
+    .footer .grid {
+        column-gap: var(--grid-mobile-horizontal-spacing) !important;
+        row-gap: var(--grid-mobile-vertical-spacing) !important;
+    }
+
+    .grid__item.slider__slide--full-width {
+        width: calc(25% - var(--grid-mobile-horizontal-spacing)* 3 / 4) !important;
+    }
+
+    facet-filters-form.facets.small-hide {
+        display: block !important;
+    }
+
 }
 
 /* Media query for max-width:749px */
@@ -793,46 +881,7 @@
 }
 
 
-/* Media query for max-width:749px */
-@media screen and (max-width: 749px) {
-    .custom_serives .multicolumn-list.grid--2-col-tablet-down .grid__item {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
 
-    .review_slider .multicolumn-list.grid--2-col-tablet-down .grid__item {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-
-    .footer .grid {
-        display: flex !important;
-    }
-
-    .footer-block.grid__item {
-        margin-bottom: 64px !important;
-        margin-top: 0px !important;
-    }
-
-    .footer .grid__item {
-        width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2) !important;
-        /* Each item will take 50% width minus the column gap */
-        max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2) !important;
-    }
-
-    .footer .grid {
-        column-gap: var(--grid-mobile-horizontal-spacing) !important;
-        row-gap: var(--grid-mobile-vertical-spacing) !important;
-    }
-
-    .grid__item.slider__slide--full-width {
-        width: calc(25% - var(--grid-mobile-horizontal-spacing)* 3 / 4) !important;
-    }
-    facet-filters-form.facets.small-hide {
-        display: block !important;
-    }
-
-}
 
 
 /* Media query for max-width:749px */
@@ -1123,40 +1172,69 @@
         font-size: 18px;
         line-height: 32px;
     }
+
     .custom_newsletter .custom_newsletter_input_container form input {
         padding-block: 26px;
     }
-    .wishlist-page{
+
+    .wishlist-page {
         padding-bottom: 104px;
     }
+
     span.mobile-facets__open-label.button-label.medium-hide.large-up-hide {
-padding: 12px 16px 12px 16px !important;
-font-size: 16px !important;
+        padding: 12px 16px 12px 16px !important;
+        font-size: 16px !important;
 
     }
-    .facet-filters__sort, .facet-filters__sort:hover {
-padding: 12px 0px 12px 16px !important;
-font-size: 16px !important;
+
+    .facet-filters__sort,
+    .facet-filters__sort:hover {
+        padding: 12px 0px 12px 16px !important;
+        font-size: 16px !important;
 
 
     }
+
     .facet-filters.sorting.caption {
         padding-left: 0px;
     }
+
     .facet-filters__field {
         display: block !important;
     }
+
     h1.collection-hero__title {
         font-size: 32px;
     }
+
     aside#main-collection-filters {
         padding-block: 56px;
     }
+
     .collection {
         padding-top: 0px !important;
     }
+
     .custom-contact-page-form .page-width {
         padding-inline: 32px !important;
+    }   
+    .custom-contact-page h2 {
+        font-size: 32px;
+    }
+    .custom-contact-page .title-wrapper-with-link {
+        margin-bottom: 104px !important;
+    }
+    .custom-contact-page .multicolumn__title, .custom-contact-page .multicolumn-list:not(.slider) {
+        row-gap: 56px;
+    }
+    .custom-contact-page {
+        padding-bottom: 104px;
+    }
+    #custom-contact-form .form-group {
+        margin-bottom: 40px;
+    }
+    .custom-contact-page-form {
+        padding-bottom: 104px;
     }
 }
 
@@ -1190,7 +1268,9 @@ font-size: 16px !important;
         padding: 12px 18px 12px 18px;
         font-size: 15px;
     }
-    .facet-filters__sort, .facet-filters__sort:hover {
+
+    .facet-filters__sort,
+    .facet-filters__sort:hover {
         max-width: 130px;
     }
 }

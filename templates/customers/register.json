@@ -3,8 +3,10 @@
     "main": {
       "type": "main-register",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Create Account",
+        "description": "<p>- Sign Up<\/p>",
+        "padding_top": 0,
+        "padding_bottom": 56
       }
     }
   },
