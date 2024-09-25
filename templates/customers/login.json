@@ -4,8 +4,10 @@
       "type": "main-login",
       "settings": {
         "enable_shop_login_button": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Login to Your Account",
+        "description": "<p>- Login<\/p>",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },

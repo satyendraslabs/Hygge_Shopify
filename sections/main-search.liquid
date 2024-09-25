@@ -65,7 +65,23 @@
 
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
+
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+
+    {% comment %} Added Heading and Description  {% endcomment %}
+      <div class="search-page-description">{{ section.settings.description}}</div>
+      {%- if search.terms != blank -%}
+        <h4 class="search-page-heading {{ section.settings.heading_size }}">
+          {{ search.terms | escape }}
+        </h4>
+      {%- endif -%}
+
+      <p class="search-page-product-count {{ section.settings.heading_size }}">
+        <strong>{{ search.results_count }}</strong> products found
+      </p>
+      
+
+
       <h1 class="h2 center">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
@@ -349,6 +365,17 @@
     {
       "type": "header",
       "content": "t:sections.main-search.settings.header__1.content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "t:sections.multicolumn.settings.title.default",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
     },
     {
       "type": "select",

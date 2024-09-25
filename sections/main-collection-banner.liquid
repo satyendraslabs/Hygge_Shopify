@@ -15,9 +15,14 @@
       {% comment %} Adding description for collection Page {% endcomment %}
       <p class="collection-description">-{{- collection.title | escape }} Products</p>
       <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>           
-       Explore the {{ collection.title | escape }} Products
-      </h1>
+  <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>           
+  {%- if collection.title contains 'Products' -%}
+    Explore the {{ collection.title | escape }}
+  {%- else -%}
+    Explore the {{ collection.title | escape }} Products
+  {%- endif -%}
+</h1>
+
 
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>

@@ -120,7 +120,7 @@ speak: none;
       </div>
     {%- endif -%}
 
-    <a href="/" title="Home">Home</a>
+    <a href="/" title="Home">Home Page</a>
 
     {%- if request.path contains '/account/register' -%}
       <span class="breadcrumb-delimeter" aria-hidden="true"></span>
@@ -129,6 +129,10 @@ speak: none;
     {%- elsif request.path contains '/account/login' -%}
       <span class="breadcrumb-delimeter" aria-hidden="true"></span>
       <a href="{{ routes.account_login }}" aria-current="page">Login</a>
+
+    {%- elsif template == 'search' -%} 
+      <span class="breadcrumb-delimeter" aria-hidden="true"></span>
+      <a href="{{ routes.search }}" aria-current="page">Search Results</a>
 
     {%- else -%}
       {%- case template.name -%}

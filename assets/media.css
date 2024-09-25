@@ -80,6 +80,7 @@
     .custom_newsletter .newsletter__wrapper {
         padding-block: 96px !important;
     }
+
     .customer:not(.account):not(.order) {
         max-width: 526px !important;
     }
@@ -160,9 +161,10 @@
     .price-per-item__container {
         flex-direction: column;
     }
+
     .custom-contact-page .multicolumn-card__info {
         padding-right: 0px !important;
-      }
+    }
 }
 
 /* Media query for max-width:1026px */
@@ -707,6 +709,13 @@
     .custom-contact-page-form {
         padding-bottom: 112px;
     }
+    .customer:not(.account):not(.order) {
+        max-width: 100% !important;
+        width: 100%;
+    }
+    .login-page .login-page-heading {
+        max-width: 100% !important;
+    }
 }
 
 /* Media query for max-width:749px */
@@ -801,6 +810,15 @@
 
     .footer-block__details-content {
         margin-bottom: 0px !important;
+    }
+
+    .create-account-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .create-account-login-button a {
+        width: 100% !important;
     }
 }
 
@@ -1217,24 +1235,104 @@
 
     .custom-contact-page-form .page-width {
         padding-inline: 32px !important;
-    }   
+    }
+
     .custom-contact-page h2 {
         font-size: 32px;
     }
+
     .custom-contact-page .title-wrapper-with-link {
         margin-bottom: 104px !important;
     }
-    .custom-contact-page .multicolumn__title, .custom-contact-page .multicolumn-list:not(.slider) {
+
+    .custom-contact-page .multicolumn__title,
+    .custom-contact-page .multicolumn-list:not(.slider) {
         row-gap: 56px;
     }
+
     .custom-contact-page {
         padding-bottom: 104px;
     }
+
     #custom-contact-form .form-group {
         margin-bottom: 40px;
     }
+
     .custom-contact-page-form {
         padding-bottom: 104px;
+    }
+
+    .create-account-heading {
+        margin-bottom: 52px;
+font-size: 32px;
+    }
+
+    form#create_customer .create-account-labels {
+        margin-bottom: 8px;
+    }
+
+    form#create_customer input {
+        margin-bottom: 40px;
+    }
+
+    form#create_customer #RegisterForm-password {
+        margin-bottom: 16px !important;
+    }
+
+    .progress-bar-create-account.input-group {
+        margin-bottom: 76px;
+    }
+
+    form#create_customer {
+        margin-bottom: 130px;
+    }
+
+    .create-account-buttons button {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px 12px 24px;
+    }
+
+    .create-account-login-button a {
+        padding: 12px 24px 12px 24px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .login-page-buttons {
+        flex-direction: column;
+        gap: 24px   ;
+    }
+    button.login-page-login-button {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px 12px 24px;
+    }
+    a.login-page-create-account-button{
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px 12px 24px;
+        width: 100% !important;
+    }
+    a.login-page-forget-password-button {
+        font-size: 16px;
+    }
+    input[type="checkbox"] {
+        width: 6px;
+        height: 6px;
+        border: 2px solid #34d399;
+    }
+    .login-page-remember {
+        margin-bottom: 40px;
+    }
+    form#customer_login input.login-page-input {
+        margin-bottom: 40px;
+    }
+    .login-page .login-page-heading {
+        margin-bottom: 56px;
+        font-size: 32px;
+    }
+    .login-page.page-width {
+        margin-bottom: 104px;
     }
 }
 

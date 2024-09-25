@@ -1615,6 +1615,7 @@ button#checkout {
   text-align: left;
   color: #1A202C;
   margin-top: 8px;
+  margin-bottom: 66px;
 }
 
 .create-account.page-width {
@@ -1681,4 +1682,226 @@ form#create_customer input {
 
 .customer button {
   --border-opacity: none !important;
+}
+
+.customer .field label {
+  top: calc(2rem + var(--inputs-border-width)) !important;
+}
+
+.customer .field input:focus~label,
+.customer .field input:not(:placeholder-shown)~label {
+  top: calc(1rem + var(--inputs-border-width)) !important;
+
+}
+
+form#create_customer #RegisterForm-password {
+  margin-bottom: 24px !important;
+}
+
+/* ===========>Progress bar<========= */
+
+.progress-bar {
+  height: 4px;
+  background-color: green;
+}
+
+.progress-bar-create-account.input-group {
+  margin-bottom: 71px;
+}
+
+
+/* ============================================
+   =============== Login Page ==============
+   ============================================ */
+
+.login-page .login-page-description {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #2975FF;
+}
+
+.login-page-description p {
+  margin-block: 0px;
+}
+
+.login-page .login-page-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 66px;
+  max-width: 440px;
+}
+
+.login-page.page-width {
+  margin-top: 38px;
+}
+
+form#customer_login .login-page-labels {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 16px;
+  color: #1A202C;
+
+}
+
+form#customer_login input.login-page-input {
+  border: 2px solid #F6F7FB;
+  border-radius: 32px;
+  margin-bottom: 48px;
+  padding: 30px;
+}
+
+.customer .field input:focus {
+  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) #00CC96 !important;
+}
+
+.login-page-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+a.login-page-create-account-button {
+  margin: 0 !important;
+  width: 236px;
+  padding: 16px 40px 16px 40px;
+  gap: 10px;
+  border-radius: 32px;
+  border: 2px solid #F6F7FB;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+  color: #1A202C;
+}
+
+a.login-page-forget-password-button {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+button.login-page-login-button {
+  padding: 16px 40px 16px 40px;
+  gap: 10px;
+  border-radius: 32px;
+  background: #00CC96;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+form#customer_login {
+  margin-top: 0px !important;
+}
+
+h1#login {
+  display: none;
+}
+
+.login-page-remember input {
+  padding: 10px !important;
+}
+
+.login-page-remember {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+/* Hide the default checkbox */
+.login-page.page-width input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 6px solid #34d399;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  margin: 0px;
+}
+
+/* Checked state - green dot in the middle */
+.login-page.page-width input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 4px;
+  left: 4px;
+  background-color: #34d399;
+  border-radius: 50%;
+}
+
+.login-page-reset-password input {
+  border: 2px solid #F6F7FB !important;
+  border-radius: 32px !important;
+  margin-bottom: 48px !important;
+  padding: 30px !important;
+}
+
+.login-page-reset-password input {
+  border: 2px solid #F6F7FB !important;
+  border-radius: 32px !important;
+  margin-bottom: 48px !important;
+  padding: 30px !important;
+}
+
+.login-page-reset-password-button {
+  padding: 16px 40px 16px 40px !important;
+  gap: 10px;
+  border-radius: 32px !important;
+  background: #00CC96 !important;
+  width: 100%;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 32px !important;
+  margin-bottom: 20px !important;
+}
+
+/* ============================================
+   =============== Search Page ==============
+   ============================================ */
+
+.template-search__header.page-width.scroll-trigger.animate--fade-in .h2{
+  display: none;
+}
+.template-search__header.page-width.scroll-trigger.animate--fade-in .template-search__search {
+  display: none;
+}
+.search-page-description{
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #2975FF;
+}
+.search-page-description p {
+  margin-block: 0px;
+}
+.search-page-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 66px;
+  max-width: 440px;
 }

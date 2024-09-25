@@ -17,6 +17,12 @@
 {%- if section.settings.enable_shop_login_button == false -%}
   {%- assign hide_shop_login_button = true -%}
 {%- endif -%}
+<div class="login-page page-width">
+
+<div class="login-page-description">{{ section.settings.description}}</div>
+<h2 class="login-page-heading {{ section.settings.heading_size }}">
+        {{ section.settings.title }}
+      </h2>
 
 <div class="customer login section-{{ section.id }}-padding">
   <h1 id="recover" tabindex="-1">
@@ -29,7 +35,7 @@
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-      <div class="field">
+      <div class="field login-page-reset-password">
         <input
           type="email"
           value=""
@@ -61,7 +67,7 @@
         </small>
       {%- endif -%}
 
-      <button>
+      <button class="login-page-reset-password-button">
         {{ 'customer.login_page.submit' | t }}
       </button>
 
@@ -72,7 +78,7 @@
   </div>
 
   <h1 id="login" tabindex="-1">
-    {{ 'customer.login_page.title' | t }}
+    {% comment %} {{ 'customer.login_page.title' | t }} {% endcomment %}
   </h1>
   <div>
     {%- if recover_success == true -%}
@@ -111,11 +117,13 @@
           {%- endunless -%}
         </section>
       {%- endif -%}
+      <label class="login-page-labels" for="email">Email Address</label>
 
       <div class="field">
         <input
-          type="email"
-          name="customer[email]"
+        type="email"
+        name="customer[email]"
+        class="login-page-input"
           id="CustomerEmail"
           autocomplete="email"
           autocorrect="off"
@@ -129,6 +137,7 @@
           {{ 'customer.login_page.email' | t }}
         </label>
       </div>
+      <label class="login-page-labels" for="email">Password</label>
 
       {%- if form.password_needed -%}
         <div class="field">
@@ -136,6 +145,8 @@
             type="password"
             value=""
             name="customer[password]"
+        class="login-page-input"
+
             id="CustomerPassword"
             autocomplete="current-password"
             {% if form.errors contains 'form' %}
@@ -148,18 +159,34 @@
           </label>
         </div>
 
-        <a href="#recover">
+        {% comment %} <a href="#recover">
           {{ 'customer.login_page.forgot_password' | t }}
-        </a>
+            Forget Password?
+        </a> {% endcomment %}
       {%- endif -%}
 
-      <button>
-        {{ 'customer.login_page.sign_in' | t }}
-      </button>
+       <!-- Add "Remember Me" checkbox -->
+  <div class="login-page-remember">
+    <input type="checkbox" id="rememberMe" name="rememberMe">
+    <label for="rememberMe">Remember me</label>
+  </div>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+      <button class="login-page-login-button">
+        {% comment %} {{ 'customer.login_page.sign_in' | t }} {% endcomment %}
+          Login
+      </button>
+    <div class="login-page-buttons">
+      <a class="login-page-create-account-button" href="{{ routes.account_register_url }}">
+      {% comment %} {{ 'customer.login_page.create_account' | t }} {% endcomment %}
+        Create Account
+    </a>
+      <a class="login-page-forget-password-button" href="#recover">
+          {% comment %} {{ 'customer.login_page.forgot_password' | t }} {% endcomment %}
+            Forget Password?
+        </a>
+      </div>
+
+     
     {%- endform -%}
   </div>
 
@@ -176,6 +203,7 @@
     </div>
   {%- endif -%}
 </div>
+</div>
 
 {% schema %}
 {
@@ -190,6 +218,17 @@
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "t:sections.multicolumn.settings.title.default",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
     },
     {
       "type": "range",
