@@ -50,8 +50,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       class="grid related-products-slider product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list">
 
-        {% comment %} Adding color classes to products {% endcomment %}
-        {% assign color_classes = "yellow,green,blue,red,orange,purple,pink,brown" | split: "," %}
+        {% comment %} Added color classes to products {% endcomment %}
 {% assign color_index = 0 %}
 
       {% for recommendation in recommendations.products %}

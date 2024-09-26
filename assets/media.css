@@ -716,6 +716,12 @@
     .login-page .login-page-heading {
         max-width: 100% !important;
     }
+    .template-search__header.page-width {
+        margin-bottom: 64px !important;
+    }
+    aside#main-search-filters {
+        margin-bottom: 64px;
+    }
 }
 
 /* Media query for max-width:749px */
@@ -1334,6 +1340,19 @@ font-size: 32px;
     .login-page.page-width {
         margin-bottom: 104px;
     }
+    .search-page-heading {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .template-search__header.page-width {
+        margin-bottom: 56px !important;
+    }
+    aside#main-search-filters {
+        margin-bottom: 56px;
+    }
+    p.search-page-product-count {
+        font-size: 16px;
+      }
 }
 
 
@@ -1370,5 +1389,8 @@ font-size: 32px;
     .facet-filters__sort,
     .facet-filters__sort:hover {
         max-width: 130px;
+    }
+    #MainContent .mobile-facets__open-label svg.icon.icon-caret {
+        right: calc(var(--inputs-border-width) + 0.8rem) !important;
     }
 }

@@ -270,6 +270,10 @@
                 class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
                 role="list"
               >
+
+                  {% comment %} Added color classes to products {% endcomment %}
+        {% assign color_index = 0 %}
+
                 {%- assign skip_card_product_styles = false -%}
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
@@ -283,6 +287,9 @@
                       data-cascade
                     {% endif %}
                   >
+
+                  {% assign color_class = "color-" | append: color_index %}
+
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
@@ -294,8 +301,13 @@
                           show_vendor: section.settings.show_vendor,
                           show_rating: section.settings.show_rating,
                           lazy_load: lazy_load,
-                          skip_styles: skip_card_product_styles
+                          skip_styles: skip_card_product_styles, 
+                          color_class: color_class
                         %}
+
+                        {% assign color_index = color_index | plus: 1 %}
+                        {% assign color_index = color_index | modulo: 8 %}
+
                         {%- assign skip_card_product_styles = true -%}
                       {%- when 'article' -%}
                         {% render 'article-card',
