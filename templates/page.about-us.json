@@ -1,0 +1,155 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "title": "",
+        "description": "",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_about_multicolumn_CNtPin": {
+      "type": "custom-about-multicolumn",
+      "blocks": {
+        "column_zNUWnA": {
+          "type": "column",
+          "settings": {
+            "title": "Natural Ingredients Only",
+            "text": "<p>10 years ago, when one of the co-founders came up with the idea of making skincare and beauty products using only natural ingredients, he did not even think twice.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JVxEPh": {
+          "type": "column",
+          "settings": {
+            "title": "Affordable Pricing Strategy",
+            "text": "<p>One of our main goals from the start was to offer high quality products that would also have affordable prices. We just can’t believe that we have finally achieved this and now we are proud of it.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zNUWnA",
+        "column_JVxEPh"
+      ],
+      "settings": {
+        "title": "How and When it has All Started",
+        "heading_size": "h1",
+        "description": "<p>- How it has Started<\/p>",
+        "about_image": "shopify:\/\/shop_images\/about-multicolumn.png",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_services_Fkcy9E": {
+      "type": "custom-services",
+      "blocks": {
+        "column_J3dgH6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Trending.png",
+            "title": "Great Innovation",
+            "text": "<p>We are always focusing<br\/>on making all our products as innovative as possible.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tCYwQQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Quality.svg",
+            "title": "High Quality",
+            "text": "<p>One of our main values is the quality of the products that we sell to the customers.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_q3zCRA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Profile.svg",
+            "title": "Teamwork Matters",
+            "text": "<p>We believe that being a successful company is all about being a team.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_J3dgH6",
+        "column_tCYwQQ",
+        "column_q3zCRA"
+      ],
+      "settings": {
+        "title": "Our Core Values",
+        "heading_size": "h1",
+        "description": "<p>- Company Values<\/p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "View Jobs",
+        "button_link": "shopify:\/\/blogs\/news",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_product_newsletter_mWQ8q7": {
+      "type": "custom-product-newsletter",
+      "blocks": {
+        "paragraph_pTVkaP": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>- Our Newsletter<\/p>"
+          }
+        },
+        "heading_Xd9RQk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign Up to our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_NTthyC": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_pTVkaP",
+        "heading_Xd9RQk",
+        "email_form_NTthyC"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_about_multicolumn_CNtPin",
+    "custom_services_Fkcy9E",
+    "custom_product_newsletter_mWQ8q7"
+  ]
+}

@@ -732,8 +732,8 @@ li.multicolumn-list__item.grid__item.first_column {
   color: #1a202c66;
 }
 
-.field__input:focus~.field__label,
-.field__input:not(:placeholder-shown)~.field__label {
+.custom_newsletter .field__input:focus~.field__label,
+.custom_newsletter .field__input:not(:placeholder-shown)~.field__label {
   font-size: 1rem;
   top: calc(var(--inputs-border-width) + -0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
@@ -1929,10 +1929,6 @@ p.search-page-product-count {
 
 /* ===========>Search Bar<========= */
 
-:root {
-  /* --inputs-radius: 20px !important; */
-}
-
 .custom-mobile-search {
   display: none;
 }
@@ -1941,8 +1937,8 @@ p.search-page-product-count {
   display: block;
 }
 
-@media only screen and (min-width: 769px) {
- .custom-desktop-search predictive-search[open] .predictive-search {
+@media only screen and (min-width: 749px) {
+  .custom-desktop-search predictive-search[open] .predictive-search {
     position: absolute;
     min-width: 768px;
     left: -768px;
@@ -1950,52 +1946,177 @@ p.search-page-product-count {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .custom-mobile-search {
-    /* display: block; */
-  }
-
+@media only screen and (max-width: 749px) {
   .custom-desktop-search {
-    /* display: none; */
+    display: none;
   }
 }
 
-.custom-desktop-search .search-bar-label{
+.custom-desktop-search .search-bar-label {
   display: none;
 }
+
 .custom-desktop-search input.search__input.field__input {
   border: 1px solid;
 }
 
 .custom-desktop-search .search__input {
   border: none !important;
-  /* border: 1px solid; */
   width: 0px;
   padding: 0px !important;
   min-width: 0px !important;
-  
 }
+
 .custom-desktop-search .search__input.expanded {
   width: 100% !important;
-  padding-right: 9.8rem !important;
-  /* min-width: calc(7rem +(var(--inputs-border-width)* 2)) !important; */
+  padding-right: 4.8rem !important;
+  padding-left: 4rem !important;
   max-width: 352px !important;
-border-radius: 32px;
-border: 2px solid #F6F7FB !important;
+  border-radius: 32px;
+  border: 2px solid #F6F7FB !important;
+  color: #1A202C;
 }
+
 .custom-desktop-search .custom-search-input {
-  transition: height 0.3s ease, padding 0.3s ease; /* Adjust properties as needed */
-  overflow: hidden; /* Prevent overflow when collapsed */
+  transition: height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
 }
+
 .custom-desktop-search .field__button {
   height: 4.7rem !important;
-  width: 2.4rem !important; 
+  width: 2.4rem !important;
 }
+
 .custom-desktop-search .search__button .icon {
   height: 2rem;
   width: 2rem;
 }
 
+.custom-desktop-search .field__label,
+.customer .field label {
+  left: calc(var(--inputs-border-width) + 4rem) !important;
+}
+
+.custom-desktop-search .field__input:focus~.field__label,
+.field__input:not(:placeholder-shown)~.field__label {
+  display: none !important;
+}
+
+.custom-desktop-search button#search-btn {
+  right: var(--inputs-border-width);
+  transition: left 0.3s ease;
+  overflow: visible !important;
+}
+
+.custom-desktop-search #search-btn.move-left {
+  left: 10px !important;
+  height: 4.5rem !important;
+}
+
+.custom-desktop-search .reset__button {
+  right: calc(var(--inputs-border-width) + 1rem) !important;
+}
+
+.custom-desktop-search .reset__button:not(:focus-visible)::after {
+  border-right: 0px !important;
+}
 
 
+/* ============================================
+   =============== About Us Page ==============
+   ============================================ */
 
+.page-about-us .rte img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 64px;
+}
+
+.page-about-us .heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  color: #1A202C;
+  margin-top: 8px;
+  margin-bottom: 48px;
+
+}
+
+.page-about-us .custom_services_description.about_us_description p {
+  text-align: left;
+  margin-block: 0px;
+}
+
+.page-about-us .custom_serives .custom_services_description p {
+  text-align: center;
+}
+
+.page-about-us .custom_serives .button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 16px 40px 16px 40px;
+  gap: 10px;
+  border-radius: 32px;
+  background: #00CC96;
+  margin-top: 72px !important;
+}
+
+.page-about-us .custom_serives {
+  margin-bottom: 144px;
+}
+
+.page-about-us .custom-about-mulicolumn.custom-product-features .custom-product-first-column {
+  width: 50%;
+  border: 1px solid;
+}
+
+.page-about-us .custom-about-mulicolumn.custom-product-features slider-component {
+  width: 50%;
+  border: 1px solid;
+}
+
+.page-about-us .custom-about-mulicolumn.custom-product-features .page-width {
+  display: flex;
+  gap: 120px;
+}
+
+.page-width.section-template--17800481636542__custom_about_multicolumn_CNtPin-padding.isolate.scroll-trigger.animate--slide-in {
+  border: 1px solid;
+}
+
+.custom-about-multicolumn-image {
+  max-width: 456px;
+  border: 1px solid;
+  overflow: hidden;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 56px;
+}
+
+.custom-about-multicolumn-image img {
+  width: 162%;
+  transform: translate(-19%, 0%);
+}
+
+.custom-about-mulicolumn .multicolumn-heading {
+  display: flex;
+  align-items: center;
+  color: #00CC96;
+}
+
+.custom-about-mulicolumn .multicolumn-heading i {
+  font-size: 8px;
+}
+
+.custom-about-mulicolumn .multicolumn-heading h3 {
+  margin-left: 24px !important;
+  line-height: 40px !important;
+  color: #00CC96;
+}
+
+.custom-about-mulicolumn .custom_services_description p {
+  text-align: left !important;
+}

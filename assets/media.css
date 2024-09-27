@@ -97,6 +97,9 @@
     .custom-product-features .page-width {
         padding-inline: 124px !important;
     }
+    .custom-about-mulicolumn.custom-product-features .page-width {
+        padding-inline: 96px !important;
+    }
 
     .productpage_newsletter .newsletter__wrapper {
         padding-block: 96px !important;
@@ -262,6 +265,10 @@
 
     .custom-product-features .title-wrapper-with-link {
         margin-bottom: 32px !important;
+    }
+    .custom-desktop-search predictive-search[open] .predictive-search {
+        min-width: 700px;
+        left: -660px;
     }
 }
 

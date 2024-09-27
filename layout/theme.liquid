@@ -419,8 +419,8 @@
       >
     {%- endif -%}
   </head>
-
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  {% comment %} Added Class as per page after endif on first line {% endcomment %}
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if page.handle %} page-{{ page.handle }}{% elsif template == 'product' %} product-page{% elsif template == 'collection' %} collection-page{% elsif template == 'index' %} home-page{% endif %}">
 
     {% comment %} /* ========================>Wishlist Code<=================== */ {% endcomment %}
     <div id="wishlist-alert" style="display:none; position: fixed; top: 0; width: 100%; background-color: #ff9800; color: white; text-align: center; padding: 10px; z-index: 9999;">

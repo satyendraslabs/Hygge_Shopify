@@ -252,124 +252,133 @@
       </div>
       {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
 
-      {% comment %} Added Custom Search Bar {% endcomment %}
-<div class="custom-mobile-search">
-  {% render 'header-search', input_id: 'Search-In-Modal' %}
-  </div>
-  <div class="custom-desktop-search">
-  {%- if settings.predictive_search_enabled -%}
-  <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-  {%- else -%}
-  <search-form class="search-modal__form">
-  {%- endif -%}
-  <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-  <div class="field">
-  <input class="search__input field__input custom-search-input" id="{{ input_id }}" type="search" name="q"
-  value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}" {%- if
-  settings.predictive_search_enabled -%} role="combobox" aria-expanded="false"
-  aria-owns="predictive-search-results" aria-controls="predictive-search-results"
-  aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off"
-  autocapitalize="off" spellcheck="false" {%- endif -%}>
-  <label class="field__label search-bar-label" for="{{ input_id }}">{{ 'general.search.search' | t
-  }}</label>
-  <input type="hidden" name="options[prefix]" value="last">
-  
-  <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
-  aria-label="{{ 'general.search.reset' | t }}" id="reset-btn">
-  <svg class="icon icon-close" aria-hidden="true" focusable="false">
-  <use xlink:href="#icon-reset">
-  </svg>
-  </button>
-  
-  
-  </div>
-  <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}"
-  id="search-btn">
-  <a href="#icon-search">
-  <img src="{{ 'Search_icon.png' | asset_url }}" alt="Search"
-  class="modal__toggle-open icon icon-search">
-  </a>
-  </button>
-  
-  {%- if settings.predictive_search_enabled -%}
-  <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-  {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
-  </div>
-  
-  <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-  {%- endif -%}
-  </form>
-  {%- if settings.predictive_search_enabled -%}
-  </predictive-search>
-  {%- else -%}
-  </search-form>
-  {%- endif -%}
-  </div>
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  const searchButton = document.getElementById('search-btn');
-  const searchInput = document.querySelector('.custom-search-input');
-  const searchLabel = document.querySelector('.search-bar-label'); // Label to hide/show
-  const resetButton = document.getElementById('reset-btn'); // Select the reset button by ID
-  
-  if (searchButton && searchInput && searchLabel && resetButton) {
-  // Check if input already has text, and if so, make sure it's always expanded
-  if (searchInput.value.trim() !== '') {
-  searchInput.classList.add('expanded');
-  searchLabel.style.display = 'block'; // Show label if there's text in the input
-  resetButton.style.display = 'block'; // Show reset button if there's text
-  } else {
-  searchLabel.style.display = 'none'; // Hide label initially if input is empty
-  resetButton.style.display = 'none'; // Hide reset button initially
-  }
-  
-  searchButton.addEventListener('click', function (event) {
-  // If the input is empty, toggle the "expanded" class instead of submitting the form
-  if (searchInput.value.trim() === '') {
-  event.preventDefault(); // Prevent form submission
-  searchInput.classList.toggle('expanded');
-  
-  // Toggle visibility of the label and reset button based on the expanded state
-  if (searchInput.classList.contains('expanded')) {
-  searchLabel.style.display = 'block';
-  resetButton.style.display = 'none'; // Hide reset button when expanded
-  } else {
-  searchLabel.style.display = 'none';
-  resetButton.style.display = 'none'; // Ensure reset button is hidden when collapsed
-  }
-  
-  console.log("inside search, toggling input");
-  } else {
-  // Allow form submission if there's text in the input
-  searchInput.classList.add('expanded'); // Ensure it's expanded
-  searchLabel.style.display = 'block'; // Show label if there's text
-  resetButton.style.display = 'block'; // Show reset button when there's text
-  console.log("search initiated");
-  }
-  });
-  
-  // Reset button functionality
-  resetButton.addEventListener('click', function (event) {
-  event.preventDefault(); // Prevent any default action
-  searchInput.value = ''; // Clear the input value
-  searchInput.classList.remove('expanded'); // Remove expanded class
-  searchLabel.style.display = 'none'; // Hide label
-  resetButton.style.display = 'none'; // Hide reset button
-  console.log("input reset");
-  });
-  
-  // Show the reset button when input has text
-  searchInput.addEventListener('input', function () {
-  if (searchInput.value.trim() !== '') {
-  resetButton.style.display = 'block'; // Show reset button if there's text
-  } else {
-  resetButton.style.display = 'none'; // Hide reset button if input is empty
-  }
-  });
-  }
-  });
-  </script>
+      {% comment %} ========>Added Custom Search Bar<======== {% endcomment %}
+      <div class="custom-mobile-search">
+        {% render 'header-search', input_id: 'Search-In-Modal' %}
+      </div>
+
+      <div class="custom-desktop-search">
+        {%- if settings.predictive_search_enabled -%}
+         <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+        {%- else -%}
+        <search-form class="search-modal__form">
+        {%- endif -%}
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+           <div class="field">
+            <input class="search__input field__input custom-search-input" id="{{ input_id }}" type="search" name="q"
+            value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}" {%- if
+            settings.predictive_search_enabled -%} role="combobox" aria-expanded="false"
+            aria-owns="predictive-search-results" aria-controls="predictive-search-results"
+            aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off"
+            autocapitalize="off" spellcheck="false" {%- endif -%}>
+            <label class="field__label search-bar-label" for="{{ input_id }}">{{ 'general.search.search' | t}}</label>
+            <input type="hidden" name="options[prefix]" value="last">
+
+            <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+              aria-label="{{ 'general.search.reset' | t }}" id="reset-btn">
+              <svg class="icon icon-close" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-reset">
+              </svg>
+            </button>
+          </div>
+
+        <button style="display: none;" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}"
+        id="search-btn">
+          <a href="#icon-search">
+          <img src="{{ 'Search_icon.png' | asset_url }}" alt="Search"
+          class="modal__toggle-open icon icon-search">
+          </a>
+        </button>
+        {%- if settings.predictive_search_enabled -%}
+        <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+        </div>
+        <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        {%- endif -%}
+        </form>
+        {%- if settings.predictive_search_enabled -%}
+        </predictive-search>
+        {%- else -%}
+        </search-form>
+        {%- endif -%}
+      </div>
+      
+      {% comment %} =======>Added Script of Custon Search button<======= {% endcomment %}
+
+      <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const searchButton = document.getElementById('search-btn');
+        const searchInput = document.querySelector('.custom-search-input');
+        const searchLabel = document.querySelector('.search-bar-label'); // Label to hide/show
+        const resetButton = document.getElementById('reset-btn'); // Select the reset button by ID
+        searchButton.style.display = 'block'; // Display Search Icon after page load
+
+        // Apply the 'loaded' class after a slight delay to enable transitions after page load
+        setTimeout(() => {
+          document.body.classList.add('loaded');
+        }, 100); // Delay by 100ms to prevent transition issues on initial load
+
+        if (searchButton && searchInput && searchLabel && resetButton) {
+          // Check if input already has text, and if so, make sure it's always expanded
+          if (searchInput.value.trim() !== '') {
+            searchInput.classList.add('expanded');
+            searchLabel.style.display = 'block'; // Show label if there's text in the input
+            resetButton.style.display = 'block'; // Show reset button if there's text
+            searchButton.classList.add('move-left'); // Move search button to the left
+          } else {
+            searchLabel.style.display = 'none'; // Hide label initially if input is empty
+            resetButton.style.display = 'none'; // Hide reset button initially
+          }
+
+          // Search button click event
+          searchButton.addEventListener('click', function (event) {
+            // If the input is empty, toggle the "expanded" class instead of submitting the form
+            if (searchInput.value.trim() === '') {
+              event.preventDefault(); // Prevent form submission
+              searchInput.classList.toggle('expanded');
+              searchButton.classList.toggle('move-left');
+
+              // Toggle visibility of the label and reset button based on the expanded state
+              if (searchInput.classList.contains('expanded')) {
+                searchLabel.style.display = 'block';
+                resetButton.style.display = 'none'; // Hide reset button when expanded
+              } else {
+                searchLabel.style.display = 'none';
+                resetButton.style.display = 'none'; // Ensure reset button is hidden when collapsed
+              }
+            } else {
+              // Allow form submission if there's text in the input
+              searchInput.classList.add('expanded'); // Ensure it's expanded
+              searchLabel.style.display = 'block'; // Show label if there's text
+              resetButton.style.display = 'block'; // Show reset button when there's text
+              searchButton.classList.add('move-left'); // Move search button to the left
+            }
+          });
+
+          // Reset button functionality
+          resetButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent any default action
+            searchInput.value = ''; // Clear the input value
+            searchInput.classList.remove('expanded'); // Remove expanded class
+            searchLabel.style.display = 'none'; // Hide label
+            resetButton.style.display = 'none'; // Hide reset button
+            searchButton.classList.remove('move-left'); // Move search button back to the right
+          });
+
+          // Show the reset button when input has text, and ensure search button stays on the left if input is expanded
+          searchInput.addEventListener('input', function () {
+            if (searchInput.value.trim() !== '') {
+              resetButton.style.display = 'block'; // Show reset button if there's text
+              searchButton.classList.add('move-left'); // Move search button to the left
+            } else {
+              resetButton.style.display = 'none'; // Hide reset button if input is empty
+              if (!searchInput.classList.contains('expanded')) {
+                searchButton.classList.remove('move-left'); // Move search button back to the right if input is collapsed
+              }
+            }
+          });
+        }
+      });
+      </script>
 
   
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
