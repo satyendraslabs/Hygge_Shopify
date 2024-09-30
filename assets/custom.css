@@ -2040,7 +2040,7 @@ p.search-page-product-count {
   text-align: left;
   color: #1A202C;
   margin-top: 8px;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 
 }
 
@@ -2070,12 +2070,10 @@ p.search-page-product-count {
 
 .page-about-us .custom-about-mulicolumn.custom-product-features .custom-product-first-column {
   width: 50%;
-  border: 1px solid;
 }
 
 .page-about-us .custom-about-mulicolumn.custom-product-features slider-component {
   width: 50%;
-  border: 1px solid;
 }
 
 .page-about-us .custom-about-mulicolumn.custom-product-features .page-width {
@@ -2083,15 +2081,9 @@ p.search-page-product-count {
   gap: 120px;
 }
 
-.page-width.section-template--17800481636542__custom_about_multicolumn_CNtPin-padding.isolate.scroll-trigger.animate--slide-in {
-  border: 1px solid;
-}
-
 .custom-about-multicolumn-image {
   max-width: 456px;
-  border: 1px solid;
   overflow: hidden;
-  margin: 0 auto;
   height: auto;
   border-radius: 56px;
 }
@@ -2119,4 +2111,27 @@ p.search-page-product-count {
 
 .custom-about-mulicolumn .custom_services_description p {
   text-align: left !important;
+}
+.custom-about-mulicolumn .multicolumn-card__info .rte{
+  margin-top: 32px !important;
+}
+.custom-about-mulicolumn .multicolumn-card__info .rte p{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 48px;
+}
+.custom-about-mulicolumn.custom_serives .title-wrapper-with-link {
+  margin-bottom: 96px !important;
+}
+.custom-about-mulicolumn .multicolumn-list li {
+  padding-left: 0px !important;
+}
+.custom-about-mulicolumn .multicolumn-list li .rte p {
+  padding-left: 32px !important;
+}
+nav.menu-drawer__navigation {
+}
+:root, .color-scheme-1 {
+  --color-foreground: none !important;
+
 }

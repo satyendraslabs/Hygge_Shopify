@@ -472,53 +472,70 @@ items.forEach(item => {
 
 {% comment %} Margin-Right on Hover Menu Items  {% endcomment %}
 <script>
- const listItem = document.querySelector('#HeaderDrawer-categories');
-const menuBar = document.querySelector('.menu-drawer__menu');
-const submenu = document.querySelector('.menu-drawer__submenu');
-const menuItem2 = document.querySelector('#Details-menu-drawer-menu-item-2');
+document.addEventListener('DOMContentLoaded', function() { 
+  const listItem = document.querySelector('#HeaderDrawer-categories');
+  const menuBar = document.querySelector('.menu-drawer__menu');
+  const submenu = document.querySelector('.menu-drawer__submenu');
+  const menuItem2 = document.querySelector('#Details-menu-drawer-menu-item-2');
+  const drawerToggleButton = document.querySelector('.header__icon--menu'); // This is the summary element controlling the drawer
 
-// Function to add margin based on screen size
-function addMargin() {
-  if (window.innerWidth > 750) { // Check if the screen width is greater than 750px
-    menuBar.style.marginRight = '15%';
-  }
-}
-
-// Function to remove margin
-function removeMargin() {
-  if (window.innerWidth > 750 && !listItem.matches(':hover') && !submenu.matches(':hover')) {
-    menuBar.style.marginRight = '';
-  }
-}
-
-// Check if hover functionality is enabled
-{%- if section.settings.hover_enable -%}
-listItem.addEventListener('mouseover', addMargin);
-listItem.addEventListener('mouseout', removeMargin);
-submenu.addEventListener('mouseover', addMargin);
-submenu.addEventListener('mouseout', removeMargin);
-{%- endif -%}
-
-// Toggle the margin-right on click, only for devices greater than 750px
-listItem.addEventListener('click', function() {
-  if (window.innerWidth > 750) {
-    if (menuBar.style.marginRight === '15%') {
-      menuBar.style.marginRight = '';
-    } else {
+  // Function to add margin based on screen size
+  function addMargin() {
+    if (window.innerWidth > 750) { // Check if the screen width is greater than 750px
       menuBar.style.marginRight = '15%';
     }
   }
-});
 
-// For devices less than 750px: Toggle 'active' class on '.menu-item' when clicking on '#Details-menu-drawer-menu-item-2'
-if (window.innerWidth <= 750) {
-  menuItem2.addEventListener('click', function() {
-    document.querySelectorAll('#Details-menu-drawer-menu-item-2').forEach(item => {
-      item.classList.toggle('active'); // Toggle 'active' class
-    });
+  // Function to remove margin
+  function removeMargin() {
+    if (window.innerWidth > 750 && !listItem.matches(':hover') && !submenu.matches(':hover')) {
+      menuBar.style.marginRight = '';
+    }
+  }
+
+  // Function to reset margin when drawer is closed
+  function resetMarginOnClose() {
+    if (window.innerWidth > 750) {
+      menuBar.style.marginRight = ''; // Reset the margin
+    }
+  }
+
+  // Check if hover functionality is enabled
+  {%- if section.settings.hover_enable -%}
+  listItem.addEventListener('mouseover', addMargin);
+  listItem.addEventListener('mouseout', removeMargin);
+  submenu.addEventListener('mouseover', addMargin);
+  submenu.addEventListener('mouseout', removeMargin);
+  {%- endif -%}
+
+  // Toggle the margin-right on click, only for devices greater than 750px
+  listItem.addEventListener('click', function() {
+    if (window.innerWidth > 750) {
+      if (menuBar.style.marginRight === '15%') {
+        menuBar.style.marginRight = '';
+      } else {
+        menuBar.style.marginRight = '15%';
+      }
+    }
   });
-}
 
+  // Check for drawer open/close using aria-expanded and reset margin accordingly
+  drawerToggleButton.addEventListener('click', function() {
+    const isDrawerOpen = drawerToggleButton.getAttribute('aria-expanded') === 'true';
+    if (!isDrawerOpen) {
+      resetMarginOnClose(); // Reset margin when drawer is closing
+    }
+  });
+
+  // For devices less than 750px: Toggle 'active' class on '.menu-item' when clicking on '#Details-menu-drawer-menu-item-2'
+  if (window.innerWidth <= 750) {
+    menuItem2.addEventListener('click', function() {
+      document.querySelectorAll('#Details-menu-drawer-menu-item-2').forEach(item => {
+        item.classList.toggle('active'); // Toggle 'active' class
+      });
+    });
+  }
+});
 </script>
 
 
