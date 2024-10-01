@@ -3,6 +3,8 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "title": "",
+        "description": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -71,22 +73,13 @@
         "padding_bottom": 0
       }
     },
-    "custom_contact_page_form_y76Yjt": {
-      "type": "custom-contact-page-form",
+    "contact_form_Xj93TQ": {
+      "type": "contact-form",
       "settings": {
-        "title": "Please fill out the contact form",
+        "heading": "Please fill out the contact form",
         "heading_size": "h1",
         "description": "<p>- Reach Out to Us<\/p>",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -129,7 +122,7 @@
   "order": [
     "main",
     "custom_contact_page_bw3AbL",
-    "custom_contact_page_form_y76Yjt",
+    "contact_form_Xj93TQ",
     "custom_product_newsletter_E8trQX"
   ]
 }

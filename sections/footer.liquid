@@ -27,6 +27,51 @@
   }
 {%- endstyle -%}
 
+<style>
+/* Container for the toggle switch */
+.darkmode-slider {
+  width: 60px; /* Width of the switch */
+  display: inline-block;
+  height: 30px; /* Height of the switch */
+  background: #F6F7FB;
+  border-radius: 30px; /* Rounded corners for the switch */
+  position: relative; /* Relative positioning for the pseudo-element */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin-top: 48px;
+}
+
+/* The sliding effect for the toggle */
+.darkmode-slider::before {
+  content: '';
+  position: absolute; /* Position it absolutely within the parent */
+  width: 24px; /* Width of the sliding circle */
+  height: 24px; /* Height of the sliding circle */
+  background-image: url({{ 'toggle-icon.png' | asset_url }}); /* Background image */
+  background-size: cover; /* Cover the entire area */
+  border-radius: 50%; /* Keep it circular */
+  top: 3px; /* Adjust from the top */
+  left: 3px; /* Adjust from the left */
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+/* When the checkbox is checked */
+.darkmode-checkbox:checked + .darkmode-slider {
+  background-color: #2f2f2f; /* Dark mode background color */
+}
+
+/* When the checkbox is checked, move the sliding icon */
+.darkmode-checkbox:checked + .darkmode-slider::before {
+  transform: translateX(30px); /* Move the image to the right */
+}
+#dmbutton{
+ display: none;
+}
+
+</style>
+
+
+
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
@@ -159,9 +204,16 @@
                       {%- if section.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}
-                    </div>
+                      </div>
+
+                      <div class="darkmode-switch">
+                        <input type="checkbox" id="dmbutton" class="darkmode-checkbox" />
+                        <label for="dmbutton" class="darkmode-slider"></label>
+                      </div>
+                      
                 {%- endcase -%}
               </div>
+
             {%- endfor -%}
           </div>
         {%- endif -%}

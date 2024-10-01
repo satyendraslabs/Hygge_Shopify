@@ -3575,3 +3575,42 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+.dark-header, .dark-background {
+  background-color: #323232 !important;
+}
+
+.light-text {
+  color: #fff !important;
+}
+
+.darkmode-button {
+  /* position: fixed;
+  bottom: 100px;
+  right: 100px; */
+  background-color: #323232;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.darkmode-button-light {
+  background-color: #fff !important;
+  color: #323232 !important;
+}
+
+.logo-hide {
+  display: none;
+}
+
+.logo-display {
+  display: block !important;
+}
+
+/* Add transitions for smoother dark mode toggle */
+.header-wrapper, .price-item--regular, p, h1, h2, h3, h4, h5, h6, ul, li, a, span, .footer__copyright, 
+.header__icons svg, .header__menu-item, .card-information.price, .announcement-bar__message, 
+.form__label, .product-form__input, .cart-items {
+  transition: color 0.3s, background-color 0.3s;
+}

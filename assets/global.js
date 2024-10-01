@@ -1266,3 +1266,39 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+// Check localStorage and apply dark mode if set
+if (localStorage.getItem('darkmode') === 'true') {
+  document.getElementById('dmbutton').checked = true; // Set the checkbox to checked if dark mode is enabled
+  applyDarkMode(); // Apply dark mode if it was saved in localStorage
+}
+
+// Toggle dark mode on checkbox change
+document.getElementById('dmbutton').addEventListener('change', function() {
+  if (this.checked) {
+      applyDarkMode(); // Enable dark mode
+      localStorage.setItem('darkmode', 'true'); // Save the state to localStorage
+  } else {
+      removeDarkMode(); // Disable dark mode
+      localStorage.setItem('darkmode', 'false'); // Save the state to localStorage
+  }
+});
+
+// Reuse your existing applyDarkMode() and removeDarkMode() functions
+function applyDarkMode() {
+  $('.header-wrapper').addClass('dark-header');
+  $('.price-item--regular, p, h1, h2, h3, h4, h5, h6, ul, li, a, span, .footer__copyright, .header__icons svg, .header__menu-item, .header-wrapper span, .card-information.price, .card__heading, .announcement-bar__message, .form__label, .product-form__input, .cart-items').addClass('light-text');
+  $('.color-background-2, .video-section__media, .gradient, .product-form__submit, #cart-notification-button').addClass('dark-background');
+  $('.darkmode-button').addClass('darkmode-button-light');
+  $('.light-logo').addClass('logo-hide');
+  $('.dark-logo').addClass('logo-display');
+}
+
+function removeDarkMode() {
+  $('.header-wrapper').removeClass('dark-header');
+  $('.price-item--regular, p, h1, h2, h3, h4, h5, h6, ul, li, a, span, .footer__copyright, .header__icons svg, .header__menu-item, .header-wrapper span, .card-information.price, .card__heading, .announcement-bar__message, .form__label, .product-form__input, .cart-items').removeClass('light-text');
+  $('.color-background-2, .video-section__media, .gradient, .product-form__submit, #cart-notification-button').removeClass('dark-background');
+  $('.darkmode-button').removeClass('darkmode-button-light');
+  $('.light-logo').removeClass('logo-hide');
+  $('.dark-logo').removeClass('logo-display');
+}

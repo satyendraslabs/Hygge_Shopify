@@ -2112,26 +2112,116 @@ p.search-page-product-count {
 .custom-about-mulicolumn .custom_services_description p {
   text-align: left !important;
 }
-.custom-about-mulicolumn .multicolumn-card__info .rte{
+
+.custom-about-mulicolumn .multicolumn-card__info .rte {
   margin-top: 32px !important;
 }
-.custom-about-mulicolumn .multicolumn-card__info .rte p{
+
+.custom-about-mulicolumn .multicolumn-card__info .rte p {
   font-size: 24px;
   font-weight: 400;
   line-height: 48px;
 }
+
 .custom-about-mulicolumn.custom_serives .title-wrapper-with-link {
   margin-bottom: 96px !important;
 }
+
 .custom-about-mulicolumn .multicolumn-list li {
   padding-left: 0px !important;
 }
+
 .custom-about-mulicolumn .multicolumn-list li .rte p {
   padding-left: 32px !important;
 }
-nav.menu-drawer__navigation {
-}
-:root, .color-scheme-1 {
+
+nav.menu-drawer__navigation {}
+
+:root,
+.color-scheme-1 {
   --color-foreground: none !important;
 
+}
+
+/* ===========>Contact Form<========= */
+
+.contact__fields {
+  display: flex !important;
+  flex-direction: column;
+}
+
+form#ContactForm {
+  width: 50%;
+  padding-left: 38px;
+  padding-top: 32px;
+}
+
+.contact__button .button {
+  width: 134px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 16px 40px 16px 40px;
+  border-radius: 32px;
+  background: #00CC96;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.custom-contact-page-form h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  color: #1A202C;
+  margin-top: 0px;
+}
+
+form#ContactForm .field__input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #F6F7FB;
+  border-radius: 32px;
+  min-height: 64px;
+  background: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+#ContactForm .field__label {
+  top: calc(2rem + var(--inputs-border-width)) !important;
+}
+
+form#ContactForm textarea {
+  min-height: 192px !important;
+}
+
+#ContactForm .field {
+  margin-bottom: 48px !important;
+  margin-top: 8px;
+}
+
+#ContactForm .field__input:focus {
+  border-color: #00CC96;
+}
+
+.custom-desktop-search predictive-search[open] .predictive-search {
+  border: none;
+}
+
+.newsletter__wrapper .newsletter-form__field-wrapper {
+  max-width: 100% !important;
+}
+.newsletter__wrapper .field {
+  gap: 24px;
+}
+.newsletter-form__field-wrapper  .field {
+  position: relative;
+}
+.productpage_newsletter .custom_newsletter_input_container form {
+  max-width: 100% !important;
 }
