@@ -60,11 +60,6 @@ header-drawer {
   background-color: white !important;
 }
 
-.menu-drawer__menu-item--active,
-.menu-drawer__menu-item--active:hover {
-  background-color: white !important;
-}
-
 .menu-drawer__menu-item:focus {
   background-color: transparent !important;
   color: #00cc96 !important;
@@ -297,7 +292,7 @@ p.collection-title {
   font-weight: 600;
   line-height: 24px;
   text-align: center;
-  color: #1a202c3d !important;
+  color: #1a202c3d;
 }
 
 .caption-large.light {
@@ -476,7 +471,7 @@ p.collection-title {
   padding: 0;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px solid #000000 !important;
+  border: 2px solid #000000;
   background: #f6f7fb;
 }
 
@@ -827,7 +822,7 @@ li.list-social__item {
 }
 
 .mobile-logo {
-  display: none !important;
+  display: none;
 }
 
 .desktop-localization-wrapper {
@@ -2213,15 +2208,28 @@ form#ContactForm textarea {
   border: none;
 }
 
+/* ===========>Newsletter<========= */
+
 .newsletter__wrapper .newsletter-form__field-wrapper {
   max-width: 100% !important;
 }
+
 .newsletter__wrapper .field {
   gap: 24px;
 }
-.newsletter-form__field-wrapper  .field {
+
+.newsletter-form__field-wrapper .field {
   position: relative;
 }
+
 .productpage_newsletter .custom_newsletter_input_container form {
-  max-width: 100% !important;
+  max-width: 636px !important;
+}
+
+.newsletter-form__field-wrapper .field {
+  justify-content: center;
+}
+.image-with-text {
+ border-radius: 64px;
+  overflow: hidden;
 }

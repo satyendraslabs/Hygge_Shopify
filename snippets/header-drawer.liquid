@@ -14,8 +14,11 @@
       <span>
         {% comment %} {% render 'icon-hamburger' %} {% endcomment %}
         {% comment %} {% render 'icon-close' %} {% endcomment %}
-        <img src="{{ 'drawer.png' | asset_url }}" alt="Menu" class="icon-hamburger">
-        <img src="{{ 'drawer_close.png' | asset_url }}" alt="Menu" class="icon-close">
+        <img src="{{ 'drawer.png' | asset_url }}" alt="Menu" class="icon-hamburger light-logo">
+        <img src="https://cdn.shopify.com/s/files/1/0671/1689/2350/files/icon-inside.png?v=1727948838" class="icon-hamburger dark-logo" style="display:none;">
+        <img src="{{ 'drawer_close.png' | asset_url }}" alt="Menu" class="icon-close light-logo">
+        <img src="https://cdn.shopify.com/s/files/1/0671/1689/2350/files/24px-icon-inside.png?v=1727948838" class="icon-close dark-logo" style="display:none;">
+
       </span>
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
