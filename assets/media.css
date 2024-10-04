@@ -699,11 +699,11 @@
         margin-bottom: 0px !important;
         padding: 16px 0px 16px 20px !important;
         border-radius: 32px !important;
-        border: 2px solid #F6F7FB !important;
+        border: 2px solid #F6F7FB;
         font-size: 20px !important;
         font-weight: 700 !important;
         line-height: 32px !important;
-        color: #1A202C !important;
+        color: #1A202C;
         max-width: 165px;
         width: 100%;
     }

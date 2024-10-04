@@ -101,7 +101,7 @@
 
 .facet-filters__sort {
   background-color: transparent;
-  border: 0;
+  /* border: 0; */
   border-radius: 0;
   font-size: 1.4rem;
   height: auto;

@@ -1488,7 +1488,10 @@ if (!customElements.get("bulk-add")) {
 // Check localStorage and apply dark mode if set
 if (localStorage.getItem("darkmode") === "true") {
   document.getElementById("dmbutton").checked = true; // Set the checkbox to checked if dark mode is enabled
-  applyDarkMode(); // Apply dark mode if it was saved in localStorage
+  applyDarkMode(); // Apply dark mode immediately
+  setTimeout(function () {
+    applyDarkMode(); // Reapply dark mode after 1 second (for delayed sections)
+  }, 1000);
 }
 
 // Toggle dark mode on checkbox change
@@ -1496,61 +1499,108 @@ document.getElementById("dmbutton").addEventListener("change", function () {
   if (this.checked) {
     applyDarkMode(); // Enable dark mode
     localStorage.setItem("darkmode", "true"); // Save the state to localStorage
+    setTimeout(function () {
+      applyDarkMode(); // Reapply dark mode after 1 second (for delayed sections)
+    }, 1000);
   } else {
     removeDarkMode(); // Disable dark mode
     localStorage.setItem("darkmode", "false"); // Save the state to localStorage
   }
 });
 
-// Reuse your existing applyDarkMode() and removeDarkMode() functions
+// Function to observe related products and apply dark mode only if it's enabled
+function observeRelatedProducts() {
+  const targetNode = document.querySelector('.custom-related-products'); // Use your actual section class or ID
+  if (targetNode) {
+    const observer = new MutationObserver(function (mutationsList) {
+      for (const mutation of mutationsList) {
+        if (mutation.addedNodes.length && localStorage.getItem("darkmode") === "true") {
+          // Only apply dark mode if it's enabled in localStorage
+          applyDarkMode();
+        }
+      }
+    });
+
+    // Start observing for any childList changes
+    observer.observe(targetNode, { childList: true, subtree: true });
+  }
+}
+
+// Call the observer function when the page loads
+observeRelatedProducts();
+
+
+
+// Function to apply dark mode
 function applyDarkMode() {
   $(".header-wrapper").addClass("dark-header");
+
   $(
-    ".price-item--regular,.review-slider p, h1, h2, h3, h4, h6, ul, li, a, span, .footer__copyright, .header__icons svg, .header__menu-item, .header-wrapper span, .card-information.price, .card__heading, .announcement-bar__message, .form__label, .product-form__input, .cart-items,.price-item,.input_newsletter label,footer p,.search label,.icon-search"
-  ).addClass("light-text");
-  $(".image-with-text__content").addClass("transparent");
-  
-  $(
-    ".color-background-2, .video-section__media, .gradient, .product-form__submit, #cart-notification-button"
+    ".color-background-2, .video-section__media, .gradient,#cart-notification-button,.breadcrumbs,.facets__display,.facets__header,.facet-filters #SortBy,form#ContactForm .field__input,.cart-items .quantity.cart-quantity,#rememberMe,#create_customer input,#customer_login input,#RecoverEmail"
   ).addClass("dark-background");
+
+  $(
+    ".price-item--regular,.review-slider p, h1, h2, h3, h4, h6, ul, li, a, span, .footer__copyright, .header__icons svg, .header__menu-item, .header-wrapper span, .card-information.price, .card__heading, .announcement-bar__message, .form__label, .product-form__input, .cart-items,.price-item,.input_newsletter label,footer p,.search label,.icon-search,.tax-note,.totals__total-value,.product .quantity__input,.related-products__heading,.product__sku,.wishlist_button i,#FacetFiltersForm .icon-caret,.facet-filters #SortBy,form#ContactForm label,form#ContactForm .icon-caret,.cart-items .quantity.cart-quantity button,cart-errors,.cart-item__quantity-wrapper .quantity__input,.login-page-labels,.login-page-remember label,#create_customer label,#customer_login label,.predictive-search__item-heading,.login-page-reset-password label,.customer.login p"
+  ).addClass("light-text");
+
+  $("").addClass("dark-text");
+
+  $(".product .sku_heading,.product .price-item--regular,.custom-related-products .price__sale .price-item--regular,.collection-page .price__sale .price-item--regular").addClass("grey-text");
+
+  $(".image-with-text__content").addClass("transparent");
+
   $(".prev-arrow,.next-arrow").addClass("darkmode-button-light");
+
   $(".light-logo").addClass("logo-hide");
   $(".dark-logo").addClass("logo-display");
 
-  $(".card__media,.image-container,.image-with-text,.image-with-text__grid,.image-with-text__text-item,.image-with-text__media,.media,.review_slider .multicolumn-list,.newsletter__wrapper,li.list-social__item").addClass("grey-background");
+  $(".card__media,.image-container,.image-with-text,.image-with-text__grid,.image-with-text__text-item,.image-with-text__media,.media,.review_slider .multicolumn-list,.newsletter__wrapper,li.list-social__item,#CartDrawer-Checkout,.product-media-container img,.product--thumbnail_slider .thumbnail-list__item,.media--transparent,.predictive-search").addClass("grey-background");
 
-  $(".multicolumn-card img,.header__icons img,.drawer__close").addClass("invert-color");
+  $(".price-per-item__container .quantity, .wishlist_button i,#FacetsWrapperDesktop .focus-offset,.facet-filters__sort,span.mobile-facets__open-label.button-label.medium-hide.large-up-hide,form#ContactForm .field__input,.cart-items .quantity.cart-quantity,#create_customer input,#customer_login input:not(#rememberMe),a.login-page-create-account-button,#RecoverEmail").addClass("grey-border");
 
-  $(".review-arrow-prev,.input_newsletter input,.search input,.slider-button").addClass("review-arrow-color");
+  $(".multicolumn-card img,.header__icons img,.drawer__close,.product__info-wrapper .quantity__button,.quantity__button svg path").addClass("invert-color");
 
-  $(".custom_blog_badge").addClass("badge_black_border");
+  $(".review-arrow-prev,.input_newsletter input,.search input,.slider-button,.product__media-icon,.custom-arrow-prev,.custom-arrow-next,.productpage-slider-button").addClass("review-arrow-color");
+
+  $(".custom_blog_badge,.collection-page .badge").addClass("badge_black_border");
 
   $(".footer-block ").addClass("footer_border");
 
   $(".image-with-text__media-item  ").addClass("image-text-grey-color-remove");
 }
 
+// Function to remove dark mode
 function removeDarkMode() {
   $(".header-wrapper").removeClass("dark-header");
+
   $(
-    ".price-item--regular,.review-slider p, h1, h2, h3, h4, h6, ul, li, a, span, .footer__copyright, .header__icons svg, .header__menu-item, .header-wrapper span, .card-information.price, .card__heading, .announcement-bar__message, .form__label, .product-form__input, .cart-items,.price-item,.input_newsletter label,footer p,.search label,.icon-search"
-  ).removeClass("light-text");
-  $(".image-with-text__content").removeClass("transparent");
-  
-  $(
-    ".color-background-2, .video-section__media, .gradient, .product-form__submit, #cart-notification-button"
+    ".color-background-2, .video-section__media, .gradient,#cart-notification-button,.breadcrumbs,.facets__display,.facets__header,.facet-filters #SortBy,form#ContactForm .field__input,.cart-items .quantity.cart-quantity,#rememberMe,#create_customer input,#customer_login input,#RecoverEmail"
   ).removeClass("dark-background");
+
+  $(
+    ".price-item--regular,.review-slider p, h1, h2, h3, h4, h6, ul, li, a, span, .footer__copyright, .header__icons svg, .header__menu-item, .header-wrapper span, .card-information.price, .card__heading, .announcement-bar__message, .form__label, .product-form__input, .cart-items,.price-item,.input_newsletter label,footer p,.search label,.icon-search,.tax-note,.totals__total-value,.product .quantity__input,.related-products__heading,.product__sku,.wishlist_button i,#FacetFiltersForm .icon-caret,.facet-filters #SortBy,form#ContactForm label,form#ContactForm .icon-caret,.cart-items .quantity.cart-quantity button,cart-errors,.cart-item__quantity-wrapper .quantity__input,.login-page-labels,.login-page-remember label,#create_customer label,#customer_login label,.predictive-search__item-heading,.login-page-reset-password label,.customer.login p"
+  ).removeClass("light-text");
+
+  $("").removeClass("dark-text");
+
+  $(".product .sku_heading,.product .price-item--regular,.custom-related-products .price__sale .price-item--regular,.collection-page .price__sale .price-item--regular").removeClass("grey-text");
+
+  $(".image-with-text__content").removeClass("transparent");
+
   $(".prev-arrow,.next-arrow").removeClass("darkmode-button-light");
+
   $(".light-logo").removeClass("logo-hide");
   $(".dark-logo").removeClass("logo-display");
 
-  $(".card__media,.image-container,.image-with-text,.image-with-text__grid,.image-with-text__text-item,.image-with-text__media,.media,.review_slider .multicolumn-list,.newsletter__wrapper,li.list-social__item").removeClass("grey-background");
+  $(".card__media,.image-container,.image-with-text,.image-with-text__grid,.image-with-text__text-item,.image-with-text__media,.media,.review_slider .multicolumn-list,.newsletter__wrapper,li.list-social__item,#CartDrawer-Checkout,.product-media-container img,.product--thumbnail_slider .thumbnail-list__item,.media--transparent,.predictive-search").removeClass("grey-background");
 
-  $(".multicolumn-card img,.header__icons img,.drawer__close").removeClass("invert-color");
+  $(".price-per-item__container .quantity, .wishlist_button i,#FacetsWrapperDesktop .focus-offset,.facet-filters__sort,span.mobile-facets__open-label.button-label.medium-hide.large-up-hide,form#ContactForm .field__input,.cart-items .quantity.cart-quantity,#create_customer input,#customer_login input:not(#rememberMe),a.login-page-create-account-button,#RecoverEmail").removeClass("grey-border");
 
-  $(".review-arrow-prev,.input_newsletter input,.search input,.slider-button").removeClass("review-arrow-color");
+  $(".multicolumn-card img,.header__icons img,.drawer__close,.product__info-wrapper .quantity__button,.quantity__button svg path").removeClass("invert-color");
 
-  $(".custom_blog_badge").removeClass("badge_black_border");
+  $(".review-arrow-prev,.input_newsletter input,.search input,.slider-button,.product__media-icon,.custom-arrow-prev,.custom-arrow-next,.productpage-slider-button").removeClass("review-arrow-color");
+
+  $(".custom_blog_badge,.collection-page .badge").removeClass("badge_black_border");
 
   $(".footer-block ").removeClass("footer_border");
 

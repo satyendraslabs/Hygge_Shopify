@@ -975,7 +975,9 @@ details#Details-menu-drawer-menu-item-2 {
   left: unset !important;
   top: unset !important;
 }
-
+.product__media.media.media--transparent.grey-background {
+  border-radius: 64px;
+}
 .product-page-collection_title-price {
   display: flex;
   align-items: center;
@@ -1001,7 +1003,7 @@ details#Details-menu-drawer-menu-item-2 {
   text-align: left;
 }
 
-.product .price .price-item {
+.product .price__regular .price-item,.product .price__sale .price-item--sale{
   font-size: 32px;
   font-weight: 600;
   line-height: 48px;
@@ -1248,13 +1250,16 @@ product-recommendations.custom-related-products {
   width: 48px !important;
   height: 48px !important;
   border-radius: 50%;
-  background: #F6F7FB !important;
+  background: #F6F7FB;
   font-size: 16px;
-  color: black !important;
+  color: black;
 }
 
 .product .slider-counter {
   display: none !important;
+}
+.product .price-item--regular {
+ color: #1a202c66;
 }
 
 .product .slider-buttons {
@@ -1308,7 +1313,7 @@ h1.collection-hero__title {
 
 .category_price_filter.facets__summary .icon-caret {
   right: 1.5rem !important;
-  color: #1A202C !important;
+  color: #1A202C;
 }
 
 
@@ -1325,7 +1330,7 @@ h1.collection-hero__title {
 
 #FacetsWrapperDesktop summary.facets__summary.caption-large.focus-offset .icon-caret {
   right: 1.5rem !important;
-  color: #1A202C !important;
+  color: #1A202C;
   height: 0.9rem !important;
   top: calc(50% - 0.5rem) !important;
 }
@@ -1346,11 +1351,11 @@ h1.collection-hero__title {
   margin-bottom: 0px !important;
   padding: 16px 0px 16px 20px !important;
   border-radius: 32px !important;
-  border: 2px solid #F6F7FB !important;
+  border: 2px solid #F6F7FB;
   font-size: 20px !important;
   font-weight: 700 !important;
   line-height: 32px !important;
-  color: #1A202C !important;
+  color: #1A202C;
 }
 
 .facet-filters__sort:focus-visible {
@@ -1845,14 +1850,7 @@ h1#login {
 }
 
 .login-page-reset-password input {
-  border: 2px solid #F6F7FB !important;
-  border-radius: 32px !important;
-  margin-bottom: 48px !important;
-  padding: 30px !important;
-}
-
-.login-page-reset-password input {
-  border: 2px solid #F6F7FB !important;
+  border: 2px solid #F6F7FB;
   border-radius: 32px !important;
   margin-bottom: 48px !important;
   padding: 30px !important;
