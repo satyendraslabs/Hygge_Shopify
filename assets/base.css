@@ -3651,8 +3651,13 @@ details-disclosure > details {
   color: #F7FAFC66 !important;
 
 }
-
-
+.dark_mode_green_badge {
+  background: #00CC96;
+}
+.svg_fill{
+  fill: white;
+  color: white;
+}
 
 /* ===========>Media Query<========= */
 @media screen and (min-width: 561px) {

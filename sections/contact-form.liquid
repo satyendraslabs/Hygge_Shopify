@@ -21,7 +21,7 @@
 
     <div class="custom-product-first-column">
       {% comment %} Added Description  {% endcomment %}
-      <div class="custom_services_description">{{ section.settings.description }}</div>
+      <div class="custom_services_description"><p class="p_description">{{ section.settings.description | strip_html }}</p></div>
       <h2 class="title inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
       </h2>

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -49,7 +58,7 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <i class=\"fa-regular fa-heart\"><\/i>\n                  <\/button>\n                {% endif %}"
+            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <i class=\"fa-regular fa-heart\"></i>\n                  </button>\n                {% endif %}"
           }
         },
         "description": {
@@ -99,9 +108,9 @@
         "column_JyrHJy": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Natural.png",
+            "image": "shopify://shop_images/Natural.png",
             "title": "Natural",
-            "text": "<p>We are using natural ingredients only when creating our products.<\/p>",
+            "text": "<p>We are using natural ingredients only when creating our products.</p>",
             "link_label": "",
             "link": ""
           }
@@ -109,9 +118,9 @@
         "column_hg4yDF": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Protection.png",
+            "image": "shopify://shop_images/Protection.png",
             "title": "Full Protection",
-            "text": "<p>This product provides broad spectrum SPF 50 and blue light protection.<\/p>",
+            "text": "<p>This product provides broad spectrum SPF 50 and blue light protection.</p>",
             "link_label": "",
             "link": ""
           }
@@ -119,9 +128,9 @@
         "column_MwFBRL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Trending.png",
+            "image": "shopify://shop_images/Trending.png",
             "title": "Trending",
-            "text": "<p>It is one of our most popular products that we have on offer.<\/p>",
+            "text": "<p>It is one of our most popular products that we have on offer.</p>",
             "link_label": "",
             "link": ""
           }
@@ -135,7 +144,7 @@
       "settings": {
         "title": "Explore the Features",
         "heading_size": "h1",
-        "description": "<p>- Product Features<\/p>",
+        "description": "<p>- Product Features</p>",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -175,7 +184,7 @@
         "collection_slider_BVibgf": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Image_5ca17b43-0aef-4ac9-83a3-38bb5d3eb62d.png",
+            "cat_img": "shopify://shop_images/Image_5ca17b43-0aef-4ac9-83a3-38bb5d3eb62d.png",
             "cat_title": "Anna Clarke",
             "cat_description": "It’s quite a nice product and I am really satisfied with the quality of it.",
             "cat_link": ""
@@ -184,7 +193,7 @@
         "collection_slider_NmzahE": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Image.png",
+            "cat_img": "shopify://shop_images/Image.png",
             "cat_title": "Amy Smith",
             "cat_description": "This is the best website I have ordered something afrom. I highly recommend.",
             "cat_link": ""
@@ -193,7 +202,7 @@
         "collection_slider_wrkTJj": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/image1.jpg",
+            "cat_img": "shopify://shop_images/image1.jpg",
             "cat_title": "Natalie Portman",
             "cat_description": "Great site to order from! I highly recommend it to everyone.",
             "cat_link": ""
@@ -225,7 +234,7 @@
     "custom_related_products_CPTthF": {
       "type": "custom-related-products",
       "settings": {
-        "description": "<p>- Explore More<\/p>",
+        "description": "<p>- Explore More</p>",
         "heading": "Related Products",
         "heading_size": "h1",
         "products_to_show": 9,
@@ -247,7 +256,7 @@
         "paragraph_aAmykY": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>- Our Newsletter<\/p>"
+            "text": "<p>- Our Newsletter</p>"
           }
         },
         "heading_X9k9aD": {

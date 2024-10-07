@@ -82,7 +82,8 @@
                   </p>
                 {%- when 'text' -%}
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                    {{ block.settings.text }}
+          <p class="p_description">{{ block.settings.text | strip_html }}</p>
+
                   </div>
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}

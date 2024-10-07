@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -5,7 +14,7 @@
       "settings": {
         "enable_shop_login_button": true,
         "title": "Login to Your Account",
-        "description": "<p>- Login<\/p>",
+        "description": "<p>- Login</p>",
         "padding_top": 0,
         "padding_bottom": 0
       }

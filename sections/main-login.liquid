@@ -19,7 +19,7 @@
 {%- endif -%}
 <div class="login-page page-width">
 
-<div class="login-page-description">{{ section.settings.description}}</div>
+<div class="login-page-description"><p class="p_description">{{ section.settings.description | strip_html }}</p></div>
 <h2 class="login-page-heading {{ section.settings.heading_size }}">
         {{ section.settings.title }}
       </h2>

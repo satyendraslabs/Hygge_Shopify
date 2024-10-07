@@ -42,7 +42,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       role="button"><i class="fa-solid fa-angle-right"></i></button>
       
          {% comment %} Added Description {% endcomment %}
-    <div class="custom_services_description">{{ section.settings.description }}</div>
+    <div class="custom_services_description"><p class="p_description">{{ section.settings.description | strip_html }}</p></div>
     <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
       {{ section.settings.heading }}
     </h2>

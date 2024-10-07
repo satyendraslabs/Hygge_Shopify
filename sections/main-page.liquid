@@ -16,7 +16,7 @@
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
     {% comment %} Added Description  {% endcomment %}
-    <div class="custom_services_description about_us_description">{{ section.settings.description }}</div>
+    <div class="custom_services_description about_us_description"><p class="p_description">{{ section.settings.description | strip_html }}</p></div>
       <h2 class="heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.title }}
       </h2>

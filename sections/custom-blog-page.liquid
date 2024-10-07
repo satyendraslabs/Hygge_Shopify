@@ -27,7 +27,7 @@
 -%}
 <div class="custom_blog_page blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
 <div class="page-width isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
-    <div class="blog_description">{{ section.settings.description}}</div>
+    <div class="blog_description"><p class="p_description">{{ section.settings.description | strip_html }}</p></div>
     {%- unless section.settings.heading == blank -%}
         <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
             <h2

@@ -69,7 +69,7 @@
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
 
     {% comment %} Added Heading and Description  {% endcomment %}
-      <div class="search-page-description">{{ section.settings.description}}</div>
+      <div class="search-page-description"><p class="p_description">{{ section.settings.description | strip_html }}</p></div>
       {%- if search.terms != blank -%}
         <h4 class="search-page-heading {{ section.settings.heading_size }}">
           {{ search.terms | escape }}
