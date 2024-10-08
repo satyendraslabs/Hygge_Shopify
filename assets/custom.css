@@ -975,9 +975,11 @@ details#Details-menu-drawer-menu-item-2 {
   left: unset !important;
   top: unset !important;
 }
+
 .product__media.media.media--transparent.grey-background {
   border-radius: 64px;
 }
+
 .product-page-collection_title-price {
   display: flex;
   align-items: center;
@@ -1003,7 +1005,8 @@ details#Details-menu-drawer-menu-item-2 {
   text-align: left;
 }
 
-.product .price__regular .price-item,.product .price__sale .price-item--sale{
+.product .price__regular .price-item,
+.product .price__sale .price-item--sale {
   font-size: 32px;
   font-weight: 600;
   line-height: 48px;
@@ -1258,8 +1261,9 @@ product-recommendations.custom-related-products {
 .product .slider-counter {
   display: none !important;
 }
+
 .product .price-item--regular {
- color: #1a202c66;
+  color: #1a202c66;
 }
 
 .product .slider-buttons {
@@ -2227,7 +2231,12 @@ form#ContactForm textarea {
 .newsletter-form__field-wrapper .field {
   justify-content: center;
 }
+
 .image-with-text {
- border-radius: 64px;
+  border-radius: 64px;
   overflow: hidden;
+}
+
+.product .product__media.media.media--transparent {
+  border-radius: 64px;
 }

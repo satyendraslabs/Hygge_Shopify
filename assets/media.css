@@ -1178,7 +1178,7 @@
     .footer__list-social.list-social,
     .footer__follow-on-shop,
     .footer-block__newsletter {
-        gap: 0px !important;
+        gap: 5px !important;
     }
 
     .footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in:nth-child(2),
