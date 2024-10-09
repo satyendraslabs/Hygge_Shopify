@@ -1854,7 +1854,7 @@ h1#login {
 }
 
 .login-page-reset-password input {
-  border: 2px solid #F6F7FB;
+  border: 2px solid #F6F7FB !important;
   border-radius: 32px !important;
   margin-bottom: 48px !important;
   padding: 30px !important;
@@ -1869,7 +1869,10 @@ h1#login {
   font-size: 20px !important;
   font-weight: 700 !important;
   line-height: 32px !important;
-  margin-bottom: 20px !important;
+}
+.customer .login-page-reset-password-button {
+  margin-bottom: 10px !important;
+
 }
 
 /* ============================================
@@ -2239,4 +2242,45 @@ form#ContactForm textarea {
 
 .product .product__media.media.media--transparent {
   border-radius: 64px;
+}
+
+
+/* ============================================
+   =============== Activate Account Page ==============
+   ============================================ */
+
+.customer.activate input#password,.customer.activate input#password_confirmation{
+  border: 2px solid #F6F7FB;
+  border-radius: 32px !important;
+  padding: 30px !important;
+}
+.customer.activate .field{
+  margin-bottom: 48px !important;
+}
+.customer button.activate_account_button{
+  padding: 16px 40px 16px 40px;
+  gap: 10px;
+  border-radius: 32px;
+  background: #00CC96;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.customer.activate h1{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.customer.activate .field {
+  flex-direction: column;
+}
+
+.already_exist_address_grid button{
+color: rgb(var(--color-button-text)) !important;
+background-color: rgba(var(--color-button), var(--alpha-button-background)) !important;
+}
+
+.customer.addresses input,.customer.addresses select {
+  border: 2px solid #F6F7FB;
 }

@@ -3604,6 +3604,7 @@ html.dark-mode .cart-items .quantity.cart-quantity,
 html.dark-mode #rememberMe,
 html.dark-mode #create_customer input,
 html.dark-mode #customer_login input,
+html.dark-mode .customer.activate input,
 html.dark-mode #RecoverEmail {
   background-color: #14141B !important;
   /* dark-background styles */
@@ -3624,12 +3625,21 @@ html.dark-mode .product-media-container img,
 html.dark-mode .product--thumbnail_slider .thumbnail-list__item,
 html.dark-mode .media--transparent,
 html.dark-mode .predictive-search,
-html.dark-mode .article-card-wrapper .card--card {
+html.dark-mode .article-card-wrapper .card--card,
+html.dark-mode #address_form_new input:not(#address_default_address_new),
+html.dark-mode #address_form_new #AddressCountryNew,
+html.dark-mode .already_exist_address_grid input,
+html.dark-mode .already_exist_address_grid select{
   background-color: #1E1E27 !important;
   /* grey-background styles */
 }
 
-html.dark-mode .template-search .card__badge .badge {
+html.dark-mode .customer.activate .activate_account_decline_button {
+  background-color: transparent !important;
+}
+
+html.dark-mode .template-search .card__badge .badge,
+html.dark-mode .add_new_address_confirm_button {
   background: #00CC96 !important;
   /* dark_mode_green_badge styles */
 }
@@ -3682,9 +3692,17 @@ html.dark-mode .predictive-search__item-heading,
 html.dark-mode .login-page-reset-password label,
 html.dark-mode .customer.login p,
 html.dark-mode .search-page-product-count,
-html.dark-mode p:not(.p_description):not(.collection-title):not(.article-card__excerpt):not(.collection-title-product-page),
+html.dark-mode p:not(.p_description):not(.collection-title):not(.blog__post.grid__item .article-card__excerpt):not(.collection-title-product-page),
 html.dark-mode table,
-html.dark-mode .predictive-search {
+html.dark-mode .predictive-search,
+html.dark-mode .customer.activate label,
+html.dark-mode .customer.activate .activate_account_decline_button,
+html.dark-mode .customer.activate small.form__message,
+html.dark-mode #address_form_new label,
+html.dark-mode .customer.addresses svg,
+html.dark-mode #address_form_new #AddressCountryNew,
+html.dark-mode .already_exist_address_grid label
+{
   color: #fff !important;
   /* light-text styles */
 }
@@ -3710,11 +3728,17 @@ html.dark-mode .product-form__input .quantity__button svg {
 }
 
 html.dark-mode .prev-arrow,
-html.dark-mode .next-arrow {
+html.dark-mode .next-arrow{
   background-color: #1E1E27 !important;
   /* darkmode-button-light styles */
   color: white !important;
   /* darkmode-button-light styles */
+}
+
+html.dark-mode .customer.addresses button{
+  border:2px solid white !important;
+background-color: #1E1E27 !important;
+color: white !important;
 }
 
 html.dark-mode .light-logo {
@@ -3737,15 +3761,20 @@ html.dark-mode .cart-items .quantity.cart-quantity,
 html.dark-mode #create_customer input,
 html.dark-mode #customer_login input:not(#rememberMe),
 html.dark-mode a.login-page-create-account-button,
-html.dark-mode #RecoverEmail
- {
+html.dark-mode #RecoverEmail,
+html.dark-mode .customer.activate input,
+html.dark-mode .already_exist_address_grid input,
+html.dark-mode #address_form_new input:not(#address_default_address_new){
   border: 2px solid #1E1E27 !important;
   color: white;
   /* grey-border styles */
 }
 
-html.dark-mode #CartDrawer{
+html.dark-mode #CartDrawer {
   border: 2px solid #1E1E27 !important;
+}
+html.dark-mode .customer.addresses select{
+  border: none !important;
 }
 
 html.dark-mode .multicolumn-card img,
@@ -3802,7 +3831,10 @@ html.dark-mode .image-with-text__grid.grid.grid--gapless {
   background: transparent !important;
 }
 
-
+html.dark-mode .menu-drawer__menu-item:hover {
+  color: #00cc96 !important;
+  background-color: #2C2C37 !important;
+}
 
 /* ===========>Dark Mode Media Queries<========= */
 

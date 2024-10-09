@@ -89,6 +89,7 @@
                  show_tag_badge: section.settings.blog_badge
               %}
             {% assign color_index = color_index | plus: 1 %}
+            {% assign color_index = color_index | modulo: 8 %}
 
             </li>
           {%- endfor -%}

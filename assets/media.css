@@ -828,6 +828,9 @@
     form#ContactForm {
         padding-left: 0px;
     }
+    .image-with-text.image-with-text--overlap.isolate.collapse-corners.scroll-trigger.animate--slide-in {
+        overflow: visible !important;
+    }
 }
 
 /* Media query for max-width:749px */
@@ -1541,6 +1544,21 @@
         padding-top: 104px !important;
         padding-bottom: 104px !important;
     }
+    .customer button.activate_account_button {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px 12px 24px;
+    }
+    .customer.activate h1{
+        font-size: 32px;
+      }
+      .customer.activate .field{
+        margin-bottom: 40px !important;
+      }
+      .customer.activate.page-width {
+        margin-bottom: 104px !important;
+    }
+  
 }
 
 

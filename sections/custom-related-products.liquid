@@ -71,6 +71,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 
          {% comment %} increment color_index {% endcomment %}
         {% assign color_index = color_index | plus: 1 %}
+        {% assign color_index = color_index | modulo: 8 %}
       </li>
 
       {% endfor %}

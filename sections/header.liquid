@@ -304,85 +304,103 @@
         {%- endif -%}
       </div>
       
-      {% comment %} =======>Added Script of Custon Search button<======= {% endcomment %}
 
+
+      {% comment %} =======>Added Script of Custom Search button<======= {% endcomment %}
       <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const searchButton = document.getElementById('search-btn');
-        const searchInput = document.querySelector('.custom-search-input');
-        const searchLabel = document.querySelector('.search-bar-label'); // Label to hide/show
-        const resetButton = document.getElementById('reset-btn'); // Select the reset button by ID
-        searchButton.style.display = 'block'; // Display Search Icon after page load
+        document.addEventListener('DOMContentLoaded', function () {
+          const searchButton = document.getElementById('search-btn');
+          const searchInput = document.querySelector('.custom-search-input');
+          const searchLabel = document.querySelector('.search-bar-label');
+          const resetButton = document.getElementById('reset-btn');
+          const searchForm = document.querySelector('.search-modal__form'); // Form element
+          const fieldWrapper = document.querySelector('.field'); // The div wrapping the input
 
-        // Apply the 'loaded' class after a slight delay to enable transitions after page load
-        setTimeout(() => {
-          document.body.classList.add('loaded');
-        }, 100); // Delay by 100ms to prevent transition issues on initial load
+          searchButton.style.display = 'block'; // Display Search Icon after page load
 
-        if (searchButton && searchInput && searchLabel && resetButton) {
-          // Check if input already has text, and if so, make sure it's always expanded
-          if (searchInput.value.trim() !== '') {
-            searchInput.classList.add('expanded');
-            searchLabel.style.display = 'block'; // Show label if there's text in the input
-            resetButton.style.display = 'block'; // Show reset button if there's text
-            searchButton.classList.add('move-left'); // Move search button to the left
-          } else {
-            searchLabel.style.display = 'none'; // Hide label initially if input is empty
-            resetButton.style.display = 'none'; // Hide reset button initially
-          }
+          setTimeout(() => {
+            document.body.classList.add('loaded');
+          }, 100);
 
-          // Search button click event
-          searchButton.addEventListener('click', function (event) {
-            // If the input is empty, toggle the "expanded" class instead of submitting the form
-            if (searchInput.value.trim() === '') {
-              event.preventDefault(); // Prevent form submission
-              searchInput.classList.toggle('expanded');
-              searchButton.classList.toggle('move-left');
-
-              // Toggle visibility of the label and reset button based on the expanded state
-              if (searchInput.classList.contains('expanded')) {
-                searchLabel.style.display = 'block';
-                resetButton.style.display = 'none'; // Hide reset button when expanded
-              } else {
-                searchLabel.style.display = 'none';
-                resetButton.style.display = 'none'; // Ensure reset button is hidden when collapsed
-              }
-            } else {
-              // Allow form submission if there's text in the input
-              searchInput.classList.add('expanded'); // Ensure it's expanded
-              searchLabel.style.display = 'block'; // Show label if there's text
-              resetButton.style.display = 'block'; // Show reset button when there's text
-              searchButton.classList.add('move-left'); // Move search button to the left
-            }
-          });
-
-          // Reset button functionality
-          resetButton.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent any default action
-            searchInput.value = ''; // Clear the input value
-            searchInput.classList.remove('expanded'); // Remove expanded class
-            searchLabel.style.display = 'none'; // Hide label
-            resetButton.style.display = 'none'; // Hide reset button
-            searchButton.classList.remove('move-left'); // Move search button back to the right
-          });
-
-          // Show the reset button when input has text, and ensure search button stays on the left if input is expanded
-          searchInput.addEventListener('input', function () {
+          if (searchButton && searchInput && searchLabel && resetButton) {
+            // Initialize search input state
             if (searchInput.value.trim() !== '') {
-              resetButton.style.display = 'block'; // Show reset button if there's text
-              searchButton.classList.add('move-left'); // Move search button to the left
+              searchInput.classList.add('expanded');
+              searchLabel.style.display = 'block';
+              resetButton.style.display = 'block';
+              searchButton.classList.add('move-left');
             } else {
-              resetButton.style.display = 'none'; // Hide reset button if input is empty
-              if (!searchInput.classList.contains('expanded')) {
-                searchButton.classList.remove('move-left'); // Move search button back to the right if input is collapsed
-              }
+              searchLabel.style.display = 'none';
+              resetButton.style.display = 'none';
             }
-          });
-        }
-      });
-      </script>
 
-  
+            searchButton.addEventListener('click', function (event) {
+              if (searchInput.value.trim() === '') {
+                event.preventDefault();
+                searchInput.classList.toggle('expanded');
+                searchButton.classList.toggle('move-left');
+
+                // Toggle visibility of the label and reset button based on the expanded state
+                if (searchInput.classList.contains('expanded')) {
+                  searchLabel.style.display = 'block';
+                  resetButton.style.display = 'none'; // Hide reset button when expanded
+                } else {
+                  searchLabel.style.display = 'none';
+                  resetButton.style.display = 'none'; // Ensure reset button is hidden when collapsed
+                }
+              } else {
+                // Allow form submission if there's text in the input
+                searchInput.classList.add('expanded'); // Ensure it's expanded
+                searchLabel.style.display = 'block'; // Show label if there's text
+                resetButton.style.display = 'block'; // Show reset button when there's text
+                searchButton.classList.add('move-left'); // Move search button to the left
+              }
+            });
+
+            resetButton.addEventListener('click', function (event) {
+              event.preventDefault();
+              searchInput.value = ''; // Clear the input value
+              searchInput.classList.remove('expanded');
+              searchLabel.style.display = 'none';
+              resetButton.style.display = 'none';
+              searchButton.classList.remove('move-left');
+            });
+
+            searchInput.addEventListener('input', function () {
+              if (searchInput.value.trim() !== '') {
+                resetButton.style.display = 'block'; // Show reset button if there's text
+                searchButton.classList.add('move-left'); // Move search button to the left
+              } else {
+                resetButton.style.display = 'none'; // Hide reset button if input is empty
+                if (!searchInput.classList.contains('expanded')) {
+                  searchButton.classList.remove('move-left'); // Move search button back to the right if input is collapsed
+                }
+              }
+            });
+
+            // Close search input when clicking outside, except on the search page
+            document.addEventListener('click', function (event) {
+              const isClickInsideForm = searchForm.contains(event.target); // Check if clicked inside the form
+              const isClickOnSearchButton = searchButton.contains(event.target); // Check if clicked on the search button
+              const isClickOnInput = searchInput.contains(event.target); // Check if clicked inside the search input
+
+              // Check if on the search page
+              const isOnSearchPage = window.location.pathname.includes('/search');
+
+              // If the click is outside the search form, the search button, and the input, and we're NOT on the search page, close the search bar
+              if (!isClickInsideForm && !isClickOnSearchButton && !isClickOnInput && !isOnSearchPage && searchInput.classList.contains('expanded')) {
+                searchInput.value = ''; // Clear the input value when closing the search bar
+                searchInput.classList.remove('expanded');
+                searchLabel.style.display = 'none';
+                resetButton.style.display = 'none';
+                searchButton.classList.remove('move-left');
+              }
+            });
+          }
+        });
+      </script>
+      
+
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {% comment %} {%- liquid
           if cart == empty

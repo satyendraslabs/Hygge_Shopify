@@ -185,6 +185,7 @@
                     color_class: color_class
                   %}
                   {% assign color_index = color_index | plus: 1 %}
+                  {% assign color_index = color_index | modulo: 8 %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}
