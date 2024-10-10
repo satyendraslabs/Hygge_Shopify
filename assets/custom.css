@@ -1870,6 +1870,7 @@ h1#login {
   font-weight: 700 !important;
   line-height: 32px !important;
 }
+
 .customer .login-page-reset-password-button {
   margin-bottom: 10px !important;
 
@@ -2135,12 +2136,9 @@ p.search-page-product-count {
   padding-left: 32px !important;
 }
 
-nav.menu-drawer__navigation {}
-
 :root,
 .color-scheme-1 {
   --color-foreground: none !important;
-
 }
 
 /* ===========>Contact Form<========= */
@@ -2249,15 +2247,18 @@ form#ContactForm textarea {
    =============== Activate Account Page ==============
    ============================================ */
 
-.customer.activate input#password,.customer.activate input#password_confirmation{
+.customer.activate input#password,
+.customer.activate input#password_confirmation {
   border: 2px solid #F6F7FB;
   border-radius: 32px !important;
   padding: 30px !important;
 }
-.customer.activate .field{
+
+.customer.activate .field {
   margin-bottom: 48px !important;
 }
-.customer button.activate_account_button{
+
+.customer button.activate_account_button {
   padding: 16px 40px 16px 40px;
   gap: 10px;
   border-radius: 32px;
@@ -2267,7 +2268,8 @@ form#ContactForm textarea {
   font-weight: 700;
   line-height: 32px;
 }
-.customer.activate h1{
+
+.customer.activate h1 {
   font-size: 40px;
   font-weight: 700;
 }
@@ -2276,11 +2278,23 @@ form#ContactForm textarea {
   flex-direction: column;
 }
 
-.already_exist_address_grid button{
-color: rgb(var(--color-button-text)) !important;
-background-color: rgba(var(--color-button), var(--alpha-button-background)) !important;
+.already_exist_address_grid button {
+  color: rgb(var(--color-button-text)) !important;
+  background-color: rgba(var(--color-button), var(--alpha-button-background)) !important;
 }
 
-.customer.addresses input,.customer.addresses select {
+.customer.addresses input,
+.customer.addresses select {
   border: 2px solid #F6F7FB;
+}
+
+/* ========================>Input Autofill Color Change<=================== */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s !important;
+    background-color: rgba(70, 90, 126, 0.4) !important; /* Your desired background color */
+    color: white !important; /* Ensure text color is white */
+    -webkit-text-fill-color: white !important; /* This is required to override the autofill text color */
 }

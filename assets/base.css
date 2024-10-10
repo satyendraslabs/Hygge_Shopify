@@ -3701,9 +3701,15 @@ html.dark-mode .customer.activate small.form__message,
 html.dark-mode #address_form_new label,
 html.dark-mode .customer.addresses svg,
 html.dark-mode #address_form_new #AddressCountryNew,
-html.dark-mode .already_exist_address_grid label
-{
+html.dark-mode .already_exist_address_grid label,
+html.dark-mode .customer tbody,
+html.dark-mode .custom-search svg{
   color: #fff !important;
+  /* light-text styles */
+}
+
+html.dark-mode #HeaderDrawer-categories{
+  color: #fff;
   /* light-text styles */
 }
 
