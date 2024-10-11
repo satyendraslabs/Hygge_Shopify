@@ -3605,7 +3605,8 @@ html.dark-mode #rememberMe,
 html.dark-mode #create_customer input,
 html.dark-mode #customer_login input,
 html.dark-mode .customer.activate input,
-html.dark-mode #RecoverEmail {
+html.dark-mode #RecoverEmail,
+html.dark-mode .customer.reset-password input{
   background-color: #14141B !important;
   /* dark-background styles */
 }
@@ -3629,7 +3630,8 @@ html.dark-mode .article-card-wrapper .card--card,
 html.dark-mode #address_form_new input:not(#address_default_address_new),
 html.dark-mode #address_form_new #AddressCountryNew,
 html.dark-mode .already_exist_address_grid input,
-html.dark-mode .already_exist_address_grid select{
+html.dark-mode .already_exist_address_grid select,
+html.dark-mode .wishlist-product__list .c-product img{
   background-color: #1E1E27 !important;
   /* grey-background styles */
 }
@@ -3697,13 +3699,16 @@ html.dark-mode table,
 html.dark-mode .predictive-search,
 html.dark-mode .customer.activate label,
 html.dark-mode .customer.activate .activate_account_decline_button,
-html.dark-mode .customer.activate small.form__message,
+html.dark-mode small.form__message,
 html.dark-mode #address_form_new label,
 html.dark-mode .customer.addresses svg,
 html.dark-mode #address_form_new #AddressCountryNew,
 html.dark-mode .already_exist_address_grid label,
 html.dark-mode .customer tbody,
-html.dark-mode .custom-search svg{
+html.dark-mode .custom-search svg,
+html.dark-mode .drawer__cart-items-wrapper .cart-remove-button,
+html.dark-mode .product__description,
+html.dark-mode .customer.reset-password label{
   color: #fff !important;
   /* light-text styles */
 }
@@ -3716,7 +3721,8 @@ html.dark-mode #HeaderDrawer-categories{
 html.dark-mode .product .sku_heading,
 html.dark-mode .product .price__sale .price-item--regular,
 html.dark-mode .custom-related-products .price__sale .price-item--regular,
-html.dark-mode .collection-page .price__sale .price-item--regular {
+html.dark-mode .collection-page .price__sale .price-item--regular,
+html.dark-mode .wishlist-product__list .c-product span.regular-price  {
   color: #F7FAFC66 !important;
   /* grey-text styles */
 }
@@ -3770,7 +3776,8 @@ html.dark-mode a.login-page-create-account-button,
 html.dark-mode #RecoverEmail,
 html.dark-mode .customer.activate input,
 html.dark-mode .already_exist_address_grid input,
-html.dark-mode #address_form_new input:not(#address_default_address_new){
+html.dark-mode #address_form_new input:not(#address_default_address_new),
+html.dark-mode .customer.reset-password input{
   border: 2px solid #1E1E27 !important;
   color: white;
   /* grey-border styles */

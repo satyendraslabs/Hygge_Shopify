@@ -1558,7 +1558,21 @@
       .customer.activate.page-width {
         margin-bottom: 104px !important;
     }
-  
+    .customer.reset-password.page-width {
+        margin-bottom: 104px !important;
+    }
+    .customer.reset-password input#password,.customer.reset-password input#password_confirmation{
+        margin-bottom: 40px;
+      }
+      .customer.reset-password button{
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px;
+      }
+      .customer.reset-password h1 {
+        font-size: 32px;
+      }
+      
 }
 
 

@@ -174,9 +174,9 @@
                   sizes: sizes,
                   preload: true
                 }}
-                <img src="{{ 'Dark_Logo.png' | asset_url }}" class="header__heading-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
-                <img src="{{ 'logo-mobile.png' | asset_url }}" class="header__heading-logo mobile-logo light-logo" alt="{{ logo_alt }}">
-                <img src="{{ 'header_mobile_dark_logo.png' | asset_url }}" class="header__heading-logo mobile-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
+                <img src="{{ 'Dark_Logo.svg' | asset_url }}" class="header__heading-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
+                <img src="{{ 'logo-mobile.svg' | asset_url }}" class="header__heading-logo mobile-logo light-logo" alt="{{ logo_alt }}">
+                <img src="{{ 'header_mobile_dark_logo.svg' | asset_url }}" class="header__heading-logo mobile-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
               
               </div>
             {%- else -%}  
@@ -287,7 +287,7 @@
         <button style="display: none;" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}"
         id="search-btn">
           <a href="#icon-search">
-          <img src="{{ 'Search_icon.png' | asset_url }}" alt="Search"
+          <img src="{{ 'Search_icon.svg' | asset_url }}" alt="Search"
           class="modal__toggle-open icon icon-search">
           </a>
         </button>
@@ -412,10 +412,10 @@
         -%} {% endcomment %}
          
         {%- if cart == empty -%}
-          <img src="{{ 'Cart.png' | asset_url }}" alt="Menu" class="profile_icon">
-          {%- comment -%} render 'icon-cart-empty' {%- endcomment -%}
+          <img src="{{ 'Cart.svg' | asset_url }}" alt="Menu" class="profile_icon">
+          {% comment %} {%render 'icon-cart-empty' %} {% endcomment %}
         {%- else -%}
-        <img src="{{ 'Cart.png' | asset_url }}" alt="Menu" class="profile_icon">
+        <img src="{{ 'Cart.svg' | asset_url }}" alt="Menu" class="profile_icon">
           {% comment %} {% render 'icon-cart' %} {% endcomment %}
         {%- endif -%}
         

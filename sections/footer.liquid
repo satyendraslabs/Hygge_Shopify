@@ -194,9 +194,9 @@
                             width="{{ block.settings.image.width }}"
                             height="{{ block.settings.image.height }}"
                           >
-                          <img src="{{ 'Dark_Logo.png' | asset_url }}" class="header__heading-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
-                          <img src="{{ 'logo-mobile.png' | asset_url }}" class="footer mobile-logo light-logo" alt="{{ logo_alt }}">
-                          <img src="{{ 'dark-logo-mobile.png' | asset_url }}" class="footer mobile-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
+                          <img src="{{ 'Dark_Logo.svg' | asset_url }}" class="header__heading-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
+                          <img src="{{ 'logo-mobile.svg' | asset_url }}" class="footer mobile-logo light-logo" alt="{{ logo_alt }}">
+                          <img src="{{ 'header_mobile_dark_logo.svg' | asset_url }}" class="footer mobile-logo dark-logo" style="display:none;" alt="{{ logo_alt }}">
 
 
                         </div>
@@ -205,7 +205,7 @@
                       {%- endif -%}
 
                       {% comment %} Adding Text and Social Icons {% endcomment %}
-                      <p>© 2020 - All rights reserved</p>
+                      <p>© 2024 - All rights reserved</p>
                       {%- if section.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}

@@ -288,6 +288,9 @@
           font-size: 1.6rem;
         }
       }
+
+    {% comment %} /* ========================>Wishlist Css<=================== */ {% endcomment %}
+
         .wishlist_button{
               background: none;
               border: none;
@@ -455,19 +458,22 @@
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if page.handle %} page-{{ page.handle }}{% elsif template == 'product' %} product-page{% elsif template == 'collection' %} collection-page{% elsif template == 'index' %} home-page{% endif %}">
 
 
-    {% comment %} /* ========================>Wishlist Code<=================== */ {% endcomment %}
+    {% comment %} /* ========================>Wishlist Code Start<=================== */ {% endcomment %}
     <div id="wishlist-alert" style="display:none; position: fixed; top: 0; width: 100%; background-color: #ff9800; color: white; text-align: center; padding: 10px; z-index: 9999;">
       <!-- The text will be dynamically added here by JavaScript -->
   </div>
 
          <script>
     function toggleWishlist() {
-      const pdpData = {
-          productTitle: "{{ product.title }}",
-          productImg: "{{ product.featured_image | img_url: '' }}",
-          productPrice: "{{ product.price | money | remove_first: '' }}",
-          productUrl: "{{ product.url }}"
-      };
+    const pdpData = {
+        productTitle: "{{ product.title }}",
+        productImg: "{{ product.featured_image | img_url: '' }}",
+        productPrice: "{{ product.price | money | remove_first: '' }}",
+        productCompareAtPrice: "{{ product.compare_at_price | money | remove_first: '' }}",
+        productUrl: "{{ product.url }}",
+        collectionTitle: "{% assign found_collection = false %}{% for collection in product.collections %}{% unless collection.title == 'Featured Products' %}{% assign found_collection = true %}{{ collection.title }}{% break %}{% endunless %}{% endfor %}{% if found_collection == false %}No Collection{% endif %}"
+    };
+
   
       let wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
       const isAlreadyInWishlist = wishlistData.some(item => item.productTitle === pdpData.productTitle);
@@ -476,7 +482,8 @@
       if (!isAlreadyInWishlist) {
           wishlistData.push(pdpData);
           localStorage.setItem('wishlist', JSON.stringify(wishlistData));
-          wishlistButton.innerHTML = `<i class="fa-regular fa-heart"></i>
+          wishlistButton.innerHTML = `<i class="fa-solid fa-heart" style="color: red !important;"></i>
+
           <p class="wishlist_text"></p>`;
   
           // Show "Product added to wishlist" alert
@@ -521,37 +528,57 @@
   
       // Display wishlist items
       function displayWishlist(pdpData) {
-          const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
-          
-          if (wishlistData.length === 0) {
-              console.log('Wishlist is empty');
-              return;
-          }
+    const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-          const wishlistHtml = wishlistData.map(item => `
-              <div class="wishlist-product__list">
-                  <div class="c-product">
-                  <a href="${item.productUrl}">
-                      <img src="${item.productImg}" alt="${item.productTitle}">
-                      </a>
-                      <h3 class="c-product__title card__heading h5">
-                          <a class="full-unstyled-link" href="${item.productUrl}">${item.productTitle}</a>
-                      </h3>
-                      <p>${item.productPrice}</p>
-        {% comment %}<button onclick="removeFromWishlist('${item.productTitle}')">Remove</button> {% endcomment %}
-                  </div>
-              </div>
-          `).join('');
-  
-          const wishlistBlock = document.querySelector('.js-wishlistBlock');
-  
-          // Add a check to ensure the element is not null before setting innerHTML
-          if (wishlistBlock) {
-              wishlistBlock.innerHTML = wishlistHtml;
-          } else {
-              console.error('Element with class "js-wishlistBlock" not found');
-          }
-      }
+    const wishlistBlock = document.querySelector('.js-wishlistBlock');
+
+    // Check if the wishlistBlock exists
+    if (!wishlistBlock) {
+        console.error('Element with class "js-wishlistBlock" not found');
+        return;
+    }
+
+    // If wishlist is empty, display a message
+    if (wishlistData.length === 0) {
+        wishlistBlock.innerHTML = '<p>No products in wishlist</p>';
+        return;
+    }
+
+    // Otherwise, display wishlist items
+        const wishlistHtml = wishlistData.map((item, index) => {
+        // Calculate color class based on the index
+        const colorClass = `color-${index % 8}`; // This will cycle through color-0 to color-8
+
+        return `
+        <div class="wishlist-product__list ">
+            <div class="c-product">
+                <a href="${item.productUrl}">
+                    <img src="${item.productImg}" alt="${item.productTitle}">
+                </a>
+                <h3 class="c-product__title card__heading h5">
+                    <a class="full-unstyled-link" href="${item.productUrl}">${item.productTitle}</a>
+                </h3>
+                <div class="wishlist_collection_price">
+                    <p class="collection-title ${colorClass}">${item.collectionTitle}</p>
+                    <p class="wishlist_price">
+                        ${item.productCompareAtPrice && item.productCompareAtPrice !== item.productPrice ? `
+                        <span class="regular-price">${item.productCompareAtPrice}</span>
+                        <span class="sale-price">${item.productPrice}</span>
+                        ` : `
+                        <span class="sale-price">${item.productPrice}</span>
+                        `}
+                    </p>
+                </div>
+                {% comment %}<button onclick="removeFromWishlist('${item.productTitle}')">Remove</button> {% endcomment %}
+            </div>
+        </div>
+        `;
+    }).join('');
+
+
+    wishlistBlock.innerHTML = wishlistHtml;
+  }   
+
 
      // Execute this function on DOM content load
      document.addEventListener('DOMContentLoaded', function () {
@@ -564,9 +591,10 @@
       
       if (wishlistButton) {
           const isAlreadyInWishlist = wishlistData.some(item => item.productTitle === productTitle);
-          wishlistButton.innerHTML = isAlreadyInWishlist ? `<i class="fa-regular fa-heart"></i> <p class="wishlist_text"></p>` : `<i class="fa-regular fa-heart"></i>
+          wishlistButton.innerHTML = isAlreadyInWishlist ? `<i class="fa-solid fa-heart" style="color: red !important;"></i>
+    <p class="wishlist_text"></p>` : `<i class="fa-regular fa-heart"></i>
       <p class="wishlist_text"></p>
-  `;
+    `;
       } else {
           console.error('Element with class "wishlist_button" not found');
       }
@@ -582,7 +610,7 @@
           <p class="wishlist_text">Your Wishlist</p>
         </a>
       {% endif %}
-    {% comment %} /* ========================>Wishlist Code<=================== */ {% endcomment %}
+    {% comment %} /* ========================>Wishlist Code End<=================== */ {% endcomment %}
 
 
 

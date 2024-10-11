@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_with_text_yXKm4i": {
@@ -6,7 +15,7 @@
         "text_AAjWqQ": {
           "type": "text",
           "settings": {
-            "text": "<p>- Skincare Products<\/p>",
+            "text": "<p>- Skincare Products</p>",
             "text_style": "body"
           }
         },
@@ -21,7 +30,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/all",
+            "button_link": "shopify://collections/all",
             "button_style_secondary": false
           }
         }
@@ -32,7 +41,7 @@
         "button_6X4eD9"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Image_with_text.png",
+        "image": "shopify://shop_images/Image_with_text.png",
         "height": "adapt",
         "desktop_image_width": "large",
         "layout": "text_first",
@@ -53,65 +62,65 @@
         "collection_slider_WUHcyR": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Shopping-bag.svg",
+            "cat_img": "shopify://shop_images/Shopping-bag.svg",
             "cat_title": "On Sale",
-            "cat_link": "shopify:\/\/collections\/on-sale"
+            "cat_link": "shopify://collections/on-sale"
           }
         },
         "collection_slider_cJnNgy": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Trending.svg",
+            "cat_img": "shopify://shop_images/Trending.svg",
             "cat_title": "Featured",
-            "cat_link": "shopify:\/\/collections\/featured"
+            "cat_link": "shopify://collections/featured"
           }
         },
         "collection_slider_NdRHTq": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Skincare.svg",
+            "cat_img": "shopify://shop_images/Skincare.svg",
             "cat_title": "Masks",
-            "cat_link": "shopify:\/\/collections\/masks"
+            "cat_link": "shopify://collections/masks"
           }
         },
         "collection_slider_8kxCAM": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Eye-care.svg",
+            "cat_img": "shopify://shop_images/Eye-care.svg",
             "cat_title": "Eye Care",
-            "cat_link": "shopify:\/\/collections\/eye-care"
+            "cat_link": "shopify://collections/eye-care"
           }
         },
         "collection_slider_WW3XRR": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Natural.svg",
+            "cat_img": "shopify://shop_images/Natural.svg",
             "cat_title": "Moisturizers",
-            "cat_link": "shopify:\/\/collections\/moisturizers"
+            "cat_link": "shopify://collections/moisturizers"
           }
         },
         "collection_slider_aWeei8": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Protection.svg",
+            "cat_img": "shopify://shop_images/Protection.svg",
             "cat_title": "Treatments",
-            "cat_link": "shopify:\/\/collections\/treatments"
+            "cat_link": "shopify://collections/treatments"
           }
         },
         "collection_slider_bJ6XYA": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Night-care.svg",
+            "cat_img": "shopify://shop_images/Night-care.svg",
             "cat_title": "Night Care",
-            "cat_link": "shopify:\/\/collections\/night-care"
+            "cat_link": "shopify://collections/night-care"
           }
         },
         "collection_slider_yLMMaB": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/After-sun.svg",
+            "cat_img": "shopify://shop_images/After-sun.svg",
             "cat_title": "Sun Care",
-            "cat_link": "shopify:\/\/collections\/sun-care"
+            "cat_link": "shopify://collections/sun-care"
           }
         }
       },
@@ -147,7 +156,7 @@
       "settings": {
         "title": "Explore our Products",
         "heading_size": "h1",
-        "description": "<p><em>- Our Products<\/em><\/p>",
+        "description": "<p><em>- Our Products</em></p>",
         "show_description": false,
         "description_style": "body",
         "collection": "featured-products",
@@ -176,9 +185,9 @@
         "column_QTdwqL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Returns.svg",
+            "image": "shopify://shop_images/Returns.svg",
             "title": "Easy Returns",
-            "text": "<p>Our return policy is simple and that is why customers love our shop.<\/p>",
+            "text": "<p>Our return policy is simple and that is why customers love our shop.</p>",
             "link_label": "",
             "link": ""
           }
@@ -186,9 +195,9 @@
         "column_FymJ4H": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Profile.svg",
+            "image": "shopify://shop_images/Profile.svg",
             "title": "Customer Service",
-            "text": "<p>We offer amazing customer service no matter what happens.<\/p>",
+            "text": "<p>We offer amazing customer service no matter what happens.</p>",
             "link_label": "",
             "link": ""
           }
@@ -196,9 +205,9 @@
         "column_9PHxdk": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Quality.svg",
+            "image": "shopify://shop_images/Quality.svg",
             "title": "High Quality",
-            "text": "<p>All of our products go through very strict inspection before we dispatch them.<\/p>",
+            "text": "<p>All of our products go through very strict inspection before we dispatch them.</p>",
             "link_label": "",
             "link": ""
           }
@@ -212,7 +221,7 @@
       "settings": {
         "title": "Why People Choose Us",
         "heading_size": "h1",
-        "description": "<p>- Why Us<\/p>",
+        "description": "<p>- Why Us</p>",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -233,7 +242,7 @@
         "collection_slider_A98BRC": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/Image.png",
+            "cat_img": "shopify://shop_images/Image.png",
             "cat_title": "Amy Smith",
             "cat_description": "This is the best website I have ordered something from. I highly recommend.",
             "cat_link": ""
@@ -242,7 +251,7 @@
         "collection_slider_MbnCUM": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/image2.jpg",
+            "cat_img": "shopify://shop_images/image2.jpg",
             "cat_title": "Elle Fanning",
             "cat_description": "It retains the essence of your original statement but with a slight tweak",
             "cat_link": ""
@@ -251,7 +260,7 @@
         "collection_slider_jhwR4k": {
           "type": "collection-slider",
           "settings": {
-            "cat_img": "shopify:\/\/shop_images\/image1.jpg",
+            "cat_img": "shopify://shop_images/image1.jpg",
             "cat_title": "Natalie Portman",
             "cat_description": "Great site to order from! I highly recommend it to everyone.",
             "cat_link": ""
@@ -284,7 +293,7 @@
       "type": "custom-blog-page",
       "settings": {
         "heading": "Check Out our Blog",
-        "description": "<p>- Our Blog<\/p>",
+        "description": "<p>- Our Blog</p>",
         "heading_size": "h1",
         "blog": "news",
         "blog_badge": true,
@@ -305,7 +314,7 @@
         "paragraph_DwLirW": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>- Our Newsletter<\/p>"
+            "text": "<p>- Our Newsletter</p>"
           }
         },
         "heading_JiQn94": {

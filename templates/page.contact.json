@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,7 +25,7 @@
           "type": "column",
           "settings": {
             "title": "Customer Service",
-            "text": "<p>Please send us an email at <a href=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\" target=\"_blank\" title=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\"><strong>customercare@hygge.com<\/strong><\/a><\/p>",
+            "text": "<p>Please send us an email at <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>customercare@hygge.com</strong></a></p>",
             "link_label": "",
             "link": ""
           }
@@ -25,7 +34,7 @@
           "type": "column",
           "settings": {
             "title": "Public Relations",
-            "text": "<p>You can contact our media team by sending an email <a href=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\" target=\"_blank\" title=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\"><strong>media@hygge.com<\/strong><\/a><\/p>",
+            "text": "<p>You can contact our media team by sending an email <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>media@hygge.com</strong></a></p>",
             "link_label": "",
             "link": ""
           }
@@ -34,7 +43,7 @@
           "type": "column",
           "settings": {
             "title": "Large Orders",
-            "text": "<p>If you are thinking of making a very large order, please feel free to contact us at <a href=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\" target=\"_blank\" title=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\"><strong>sales@hygge.com<\/strong><\/a> and we will give you a special discount<\/p>",
+            "text": "<p>If you are thinking of making a very large order, please feel free to contact us at <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>sales@hygge.com</strong></a> and we will give you a special discount</p>",
             "link_label": "",
             "link": ""
           }
@@ -43,7 +52,7 @@
           "type": "column",
           "settings": {
             "title": "Other Enquiries",
-            "text": "<p>For all of your other questions, please send us an email at <a href=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\" target=\"_blank\" title=\"https:\/\/mail.google.com\/mail\/u\/0\/#inbox\"><strong>general@hygge.com<\/strong><\/a><\/p>",
+            "text": "<p>For all of your other questions, please send us an email at <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>general@hygge.com</strong></a></p>",
             "link_label": "",
             "link": ""
           }
@@ -57,7 +66,7 @@
       ],
       "settings": {
         "title": "We are always here to help you",
-        "description": "<p>- Ask Questions<\/p>",
+        "description": "<p>- Ask Questions</p>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -78,7 +87,7 @@
       "settings": {
         "heading": "Please fill out the contact form",
         "heading_size": "h1",
-        "description": "<p>- Reach Out to Us<\/p>",
+        "description": "<p>- Reach Out to Us</p>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -90,7 +99,7 @@
         "paragraph_Pb6JcU": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>- Our Newsletter<\/p>"
+            "text": "<p>- Our Newsletter</p>"
           }
         },
         "heading_4x3prG": {
