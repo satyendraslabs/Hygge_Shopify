@@ -2087,6 +2087,7 @@ p.search-page-product-count {
   overflow: hidden;
   height: auto;
   border-radius: 56px;
+  line-height: 0px;
 }
 
 .custom-about-multicolumn-image img {
@@ -2327,4 +2328,8 @@ position: relative !important;
 
 .customer .field .form__message {
   align-items: flex-start;
+}
+
+.select:after{
+  box-shadow:none !important;
 }

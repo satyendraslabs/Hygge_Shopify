@@ -46,7 +46,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  background-image: url({{ 'toggle-icon.png' | asset_url }}); /* Initial background image */
+  background-image: url({{ 'toggle-icon.svg' | asset_url }}); /* Initial background image */
   background-size: cover;
   border-radius: 50%;
   top: 3px;
@@ -60,7 +60,7 @@
 
 .darkmode-checkbox:checked + .darkmode-slider::before {
   transform: translateX(30px);
-  background-image: url({{ 'toggle-icon-on.png' | asset_url }}); /* Image when switched on */
+  background-image: url({{ 'toggle-icon-on.svg' | asset_url }}); /* Image when switched on */
 }
 
 #dmbutton {

@@ -828,6 +828,7 @@
     form#ContactForm {
         padding-left: 0px;
     }
+
     .image-with-text.image-with-text--overlap.isolate.collapse-corners.scroll-trigger.animate--slide-in {
         overflow: visible !important;
     }
@@ -1337,7 +1338,7 @@
     .facet-filters__sort,
     .facet-filters__sort:hover {
         padding: 12px 0px 12px 16px !important;
-        font-size: 16px !important;
+        font-size: 17px !important;
 
 
     }
@@ -1544,35 +1545,48 @@
         padding-top: 104px !important;
         padding-bottom: 104px !important;
     }
+
     .customer button.activate_account_button {
         font-size: 16px;
         line-height: 24px;
         padding: 12px 24px 12px 24px;
     }
-    .customer.activate h1{
+
+    .customer.activate h1 {
         font-size: 32px;
-      }
-      .customer.activate .field{
+    }
+
+    .customer.activate .field {
         margin-bottom: 40px !important;
-      }
-      .customer.activate.page-width {
+    }
+
+    .customer.activate.page-width {
         margin-bottom: 104px !important;
     }
+
     .customer.reset-password.page-width {
         margin-bottom: 104px !important;
     }
-    .customer.reset-password input#password,.customer.reset-password input#password_confirmation{
+
+    .customer.reset-password input#password,
+    .customer.reset-password input#password_confirmation {
         margin-bottom: 40px;
-      }
-      .customer.reset-password button{
+    }
+
+    .customer.reset-password button {
         font-size: 16px;
         line-height: 24px;
         padding: 12px 24px;
-      }
-      .customer.reset-password h1 {
+    }
+
+    .customer.reset-password h1 {
         font-size: 32px;
-      }
-      
+    }
+
+    .shopify-policy__body {
+        margin-bottom: 104px;
+    }
+
 }
 
 

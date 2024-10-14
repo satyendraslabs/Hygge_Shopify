@@ -3606,7 +3606,7 @@ html.dark-mode #create_customer input,
 html.dark-mode #customer_login input,
 html.dark-mode .customer.activate input,
 html.dark-mode #RecoverEmail,
-html.dark-mode .customer.reset-password input{
+html.dark-mode .customer.reset-password input {
   background-color: #14141B !important;
   /* dark-background styles */
 }
@@ -3631,7 +3631,7 @@ html.dark-mode #address_form_new input:not(#address_default_address_new),
 html.dark-mode #address_form_new #AddressCountryNew,
 html.dark-mode .already_exist_address_grid input,
 html.dark-mode .already_exist_address_grid select,
-html.dark-mode .wishlist-product__list .c-product img{
+html.dark-mode .wishlist-product__list .c-product img {
   background-color: #1E1E27 !important;
   /* grey-background styles */
 }
@@ -3708,12 +3708,15 @@ html.dark-mode .customer tbody,
 html.dark-mode .custom-search svg,
 html.dark-mode .drawer__cart-items-wrapper .cart-remove-button,
 html.dark-mode .product__description,
-html.dark-mode .customer.reset-password label{
+html.dark-mode .customer.reset-password label,
+html.dark-mode .already_exist_address_grid select,
+html.dark-mode strong,
+html.dark-mode .customer td:before {
   color: #fff !important;
   /* light-text styles */
 }
 
-html.dark-mode #HeaderDrawer-categories{
+html.dark-mode #HeaderDrawer-categories {
   color: #fff;
   /* light-text styles */
 }
@@ -3722,7 +3725,7 @@ html.dark-mode .product .sku_heading,
 html.dark-mode .product .price__sale .price-item--regular,
 html.dark-mode .custom-related-products .price__sale .price-item--regular,
 html.dark-mode .collection-page .price__sale .price-item--regular,
-html.dark-mode .wishlist-product__list .c-product span.regular-price  {
+html.dark-mode .wishlist-product__list .c-product span.regular-price {
   color: #F7FAFC66 !important;
   /* grey-text styles */
 }
@@ -3740,17 +3743,17 @@ html.dark-mode .product-form__input .quantity__button svg {
 }
 
 html.dark-mode .prev-arrow,
-html.dark-mode .next-arrow{
+html.dark-mode .next-arrow,
+html.dark-mode select#AddressProvinceNew {
   background-color: #1E1E27 !important;
-  /* darkmode-button-light styles */
   color: white !important;
   /* darkmode-button-light styles */
 }
 
-html.dark-mode .customer.addresses button{
-  border:2px solid white !important;
-background-color: #1E1E27 !important;
-color: white !important;
+html.dark-mode .customer.addresses button {
+  border: 2px solid white !important;
+  background-color: #1E1E27 !important;
+  color: white !important;
 }
 
 html.dark-mode .light-logo {
@@ -3777,7 +3780,7 @@ html.dark-mode #RecoverEmail,
 html.dark-mode .customer.activate input,
 html.dark-mode .already_exist_address_grid input,
 html.dark-mode #address_form_new input:not(#address_default_address_new),
-html.dark-mode .customer.reset-password input{
+html.dark-mode .customer.reset-password input {
   border: 2px solid #1E1E27 !important;
   color: white;
   /* grey-border styles */
@@ -3786,7 +3789,8 @@ html.dark-mode .customer.reset-password input{
 html.dark-mode #CartDrawer {
   border: 2px solid #1E1E27 !important;
 }
-html.dark-mode .customer.addresses select{
+
+html.dark-mode .customer.addresses select {
   border: none !important;
 }
 
@@ -3813,13 +3817,14 @@ html.dark-mode .custom-arrow-prev,
 html.dark-mode .custom-arrow-next,
 html.dark-mode .productpage-slider-button {
   border-color: #2C2C37 !important;
-  /* review-arrow-color styles */
   background: #2C2C37 !important;
   color: white !important;
+  /* review-arrow-color styles */
 }
 
 html.dark-mode .custom_blog_badge,
 html.dark-mode .collection-page .badge,
+html.dark-mode .card__badge .savings-amount,
 html.dark-mode .custom-related-products .card__badge .savings-amount,
 html.dark-mode .product-media-container p.savings-amount.product-badge {
   border: 2px solid #14141B
@@ -3847,6 +3852,27 @@ html.dark-mode .image-with-text__grid.grid.grid--gapless {
 html.dark-mode .menu-drawer__menu-item:hover {
   color: #00cc96 !important;
   background-color: #2C2C37 !important;
+}
+
+html.dark-mode .customer table {
+  box-shadow: 0 0 0 .1rem rgb(255 255 255 / 8%);
+}
+
+html.dark-mode .customer thead:after,
+html.dark-mode .customer tfoot:before {
+  background: rgb(255 255 255 / 8%);
+}
+
+html.dark-mode .account table td:first-of-type a {
+  box-shadow: 0 0 0 .1rem rgb(255 255 255 / 20%);
+}
+
+html.dark-mode .article-template__hero-adapt.media {
+  background-color: #14141B !important;
+}
+
+html.dark-mode .customer tbody tr {
+  border-top:.01rem solid white;
 }
 
 /* ===========>Dark Mode Media Queries<========= */
