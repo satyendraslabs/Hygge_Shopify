@@ -1586,10 +1586,25 @@
     .shopify-policy__body {
         margin-bottom: 104px;
     }
+    .customer.account {
+        margin-bottom: 104px;
+    }
+  .button--full-width {
+        font-size: 12px;
+    }
 
 }
 
 
+/* Media query for max-width:749px */
+@media screen and (max-width: 385px) {
+
+    .facet-filters__sort,
+    .facet-filters__sort:hover {
+        max-width: 130px;
+    }
+
+}
 /* Media query for max-width:749px */
 @media screen and (max-width: 365px) {
     .footer-block.grid__item {
@@ -1610,20 +1625,14 @@
         font-size: 30px;
     }
 
-    .button--full-width {
-        font-size: 15px;
-        padding: 16px 30px 16px 30px;
-    }
-
     .collection-title-product-page {
         padding: 12px 18px 12px 18px;
         font-size: 15px;
     }
-
-    .facet-filters__sort,
-    .facet-filters__sort:hover {
-        max-width: 130px;
+ .button--full-width {
+        padding: 15px 25px;
     }
+   
 
     #MainContent .mobile-facets__open-label svg.icon.icon-caret {
         right: calc(var(--inputs-border-width) + 0.8rem) !important;

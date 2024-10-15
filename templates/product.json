@@ -108,7 +108,7 @@
         "column_JyrHJy": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Natural.png",
+            "image": "shopify://shop_images/Natural_4f4ab764-7644-434b-9246-ac22a26b3ae4.svg",
             "title": "Natural",
             "text": "<p>We are using natural ingredients only when creating our products.</p>",
             "link_label": "",
@@ -118,7 +118,7 @@
         "column_hg4yDF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Protection.png",
+            "image": "shopify://shop_images/Protection_bb2a0dc4-57ab-434c-a092-5f82ad73adb3.svg",
             "title": "Full Protection",
             "text": "<p>This product provides broad spectrum SPF 50 and blue light protection.</p>",
             "link_label": "",
@@ -128,7 +128,7 @@
         "column_MwFBRL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Trending.png",
+            "image": "shopify://shop_images/Trending_77b95e97-579e-4560-97ea-957e305a91f6.svg",
             "title": "Trending",
             "text": "<p>It is one of our most popular products that we have on offer.</p>",
             "link_label": "",

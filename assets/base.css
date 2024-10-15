@@ -3798,7 +3798,7 @@ html.dark-mode .multicolumn-card img,
 html.dark-mode .header__icons img,
 html.dark-mode .drawer__close,
 html.dark-mode .product__info-wrapper .quantity__button,
-html.dark-mode .quantity__button svg path {
+html.dark-mode .quantity__button svg{
   filter: invert(1) !important;
   /* Apply the appropriate styles here */
 }
@@ -3874,7 +3874,9 @@ html.dark-mode .article-template__hero-adapt.media {
 html.dark-mode .customer tbody tr {
   border-top:.01rem solid white;
 }
-
+html.dark-mode .shopify-policy__body table,html.dark-mode .shopify-policy__body table td,html.dark-mode .shopify-policy__body table th {
+  border: .01rem solid white;
+}
 /* ===========>Dark Mode Media Queries<========= */
 
 @media screen and (max-width: 768px) {

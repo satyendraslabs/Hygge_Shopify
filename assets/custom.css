@@ -1985,7 +1985,7 @@ p.search-page-product-count {
 
 .custom-desktop-search .field__button {
   height: 4.7rem !important;
-  width: 2.4rem !important;
+  width: 2rem !important;
 }
 
 .custom-desktop-search .search__button .icon {
@@ -2286,15 +2286,16 @@ form#ContactForm textarea {
 }
 
 /* ========================>Input Autofill Color Change<=================== */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
+html.dark-mode input:-webkit-autofill,
+html.dark-mode input:-webkit-autofill:hover,
+html.dark-mode input:-webkit-autofill:focus,
+html.dark-mode input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s !important;
-    background-color: rgba(70, 90, 126, 0.4) !important; /* Your desired background color */
-    color: white !important; /* Ensure text color is white */
-    -webkit-text-fill-color: white !important; /* This is required to override the autofill text color */
+    background-color: rgba(70, 90, 126, 0.4) !important; 
+    color: white !important;
+    -webkit-text-fill-color: white !important;
 }
+
 
 form.search.search-modal__form {
 position: relative !important;
@@ -2332,4 +2333,11 @@ position: relative !important;
 
 .select:after{
   box-shadow:none !important;
+}
+summary#HeaderDrawer-categories {
+  display: flex;
+  flex-direction: row;
+}
+.main-blog.page-width .card.article-card .card__inner{
+  border-radius: 56px !important;
 }
