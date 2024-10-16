@@ -2290,27 +2290,28 @@ html.dark-mode input:-webkit-autofill,
 html.dark-mode input:-webkit-autofill:hover,
 html.dark-mode input:-webkit-autofill:focus,
 html.dark-mode input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s !important;
-    background-color: rgba(70, 90, 126, 0.4) !important; 
-    color: white !important;
-    -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  background-color: rgba(70, 90, 126, 0.4) !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
 }
 
 
 form.search.search-modal__form {
-position: relative !important;
+  position: relative !important;
 }
 
 /* ========================>Reset Password Page<=================== */
 
-.customer.reset-password input#password,.customer.reset-password input#password_confirmation{
+.customer.reset-password input#password,
+.customer.reset-password input#password_confirmation {
   border: 2px solid #F6F7FB;
   border-radius: 32px;
   margin-bottom: 48px;
   padding: 30px;
 }
 
-.customer.reset-password button{
+.customer.reset-password button {
   padding: 16px 40px;
   gap: 10px;
   border-radius: 32px;
@@ -2320,6 +2321,7 @@ position: relative !important;
   font-weight: 700;
   line-height: 32px;
 }
+
 .customer.reset-password h1 {
   font-size: 40px;
   font-weight: 700;
@@ -2331,13 +2333,28 @@ position: relative !important;
   align-items: flex-start;
 }
 
-.select:after{
-  box-shadow:none !important;
+.select:after {
+  box-shadow: none !important;
 }
+
 summary#HeaderDrawer-categories {
   display: flex;
   flex-direction: row;
 }
-.main-blog.page-width .card.article-card .card__inner{
+
+.main-blog.page-width .card.article-card .card__inner {
   border-radius: 56px !important;
+}
+
+/* ========================>--apple-system-blue<=================== */
+
+button {
+  color: inherit;
+}
+
+
+/* ========================>Cart Count Bubble<=================== */
+.cart-count-bubble {
+  bottom: 2.3rem;
+  left: 1.4rem;
 }
