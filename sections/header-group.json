@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "new-menu",
+        "menu_type_desktop": "drawer",
+        "sticky_header_type": "none",
+        "show_line_separator": true,
+        "drawer_position": "heading navigation icons",
+        "hover_enable": false,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "breadcrum_N6pFVr": {
+      "type": "breadcrum",
+      "settings": {
+        "breadcrumbs_home_icon_bool": false,
+        "breadcrumb_delimeter": "angle_right",
+        "breadcrumb_bg_color": "#ffffff",
+        "breadcrumb_text_color": "#000000",
+        "breadcrumb_accent_color_bool": false,
+        "breadcrumb_accent_color": "#4770db",
+        "enable_product_page": true,
+        "enable_collection_page": true,
+        "enable_complete_site": true
+      }
+    }
+  },
+  "order": [
+    "header",
+    "breadcrum_N6pFVr"
+  ]
+}

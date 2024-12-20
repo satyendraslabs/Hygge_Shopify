@@ -1,0 +1,355 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_yXKm4i": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_AAjWqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>- Skincare Products</p>",
+            "text_style": "body"
+          }
+        },
+        "heading_qjLByb": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Offer the Best Products for your Skin",
+            "heading_size": "h0"
+          }
+        },
+        "button_6X4eD9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_AAjWqQ",
+        "heading_qjLByb",
+        "button_6X4eD9"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Image_f6e66a78-01a1-4626-b98b-87f9b62c54a7.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 48,
+        "padding_bottom": 40
+      }
+    },
+    "collection_slider_B6RBy9": {
+      "type": "collection-slider",
+      "blocks": {
+        "collection_slider_WUHcyR": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Shopping-bag.svg",
+            "cat_title": "On Sale",
+            "cat_link": "shopify://collections/on-sale"
+          }
+        },
+        "collection_slider_cJnNgy": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Trending.svg",
+            "cat_title": "Featured",
+            "cat_link": "shopify://collections/featured"
+          }
+        },
+        "collection_slider_NdRHTq": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Skincare.svg",
+            "cat_title": "Masks",
+            "cat_link": "shopify://collections/masks"
+          }
+        },
+        "collection_slider_8kxCAM": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Eye-care.svg",
+            "cat_title": "Eye Care",
+            "cat_link": "shopify://collections/eye-care"
+          }
+        },
+        "collection_slider_WW3XRR": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Natural.svg",
+            "cat_title": "Moisturizers",
+            "cat_link": "shopify://collections/moisturizers"
+          }
+        },
+        "collection_slider_aWeei8": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Protection.svg",
+            "cat_title": "Treatments",
+            "cat_link": "shopify://collections/treatments"
+          }
+        },
+        "collection_slider_bJ6XYA": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Night-care.svg",
+            "cat_title": "Night Care",
+            "cat_link": "shopify://collections/night-care"
+          }
+        },
+        "collection_slider_yLMMaB": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/After-sun.svg",
+            "cat_title": "Sun Care",
+            "cat_link": "shopify://collections/sun-care"
+          }
+        }
+      },
+      "block_order": [
+        "collection_slider_WUHcyR",
+        "collection_slider_cJnNgy",
+        "collection_slider_NdRHTq",
+        "collection_slider_8kxCAM",
+        "collection_slider_WW3XRR",
+        "collection_slider_aWeei8",
+        "collection_slider_bJ6XYA",
+        "collection_slider_yLMMaB"
+      ],
+      "settings": {
+        "title": "Browse by Category",
+        "description": "- The Categories",
+        "section_width": 100,
+        "section_width_mobile": 100,
+        "image_width_desktop": 32,
+        "image_height_desktop": 32,
+        "image_width_mobile": 72,
+        "image_height_mobile": 72,
+        "border_radius": 1,
+        "padding_top": 15,
+        "padding_bottom": 15,
+        "font_title": "montserrat_n4",
+        "title_size": 1.5,
+        "title_size_mobile": 1
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Explore our Products",
+        "heading_size": "h1",
+        "description": "<p><em>- Our Products</em></p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured-products",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 120,
+        "padding_bottom": 36
+      }
+    },
+    "custom_services_jtijJb": {
+      "type": "custom-services",
+      "blocks": {
+        "column_QTdwqL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Returns.svg",
+            "title": "Easy Returns",
+            "text": "<p>Our return policy is simple and that is why customers love our shop.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FymJ4H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Profile.svg",
+            "title": "Customer Service",
+            "text": "<p>We offer amazing customer service no matter what happens.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9PHxdk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Quality.svg",
+            "title": "High Quality",
+            "text": "<p>All of our products go through very strict inspection before we dispatch them.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_QTdwqL",
+        "column_FymJ4H",
+        "column_9PHxdk"
+      ],
+      "settings": {
+        "title": "Why People Choose Us",
+        "heading_size": "h1",
+        "description": "<p>- Why Us</p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 78,
+        "padding_bottom": 36
+      }
+    },
+    "review_slider_JgngWU": {
+      "type": "review-slider",
+      "blocks": {
+        "collection_slider_A98BRC": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Image.png",
+            "cat_title": "Amy Smith",
+            "cat_description": "This is the best website I have ordered something from. I highly recommend.",
+            "cat_link": ""
+          }
+        },
+        "collection_slider_MbnCUM": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/image2.jpg",
+            "cat_title": "Elle Fanning",
+            "cat_description": "It retains the essence of your original statement but with a slight tweak",
+            "cat_link": ""
+          }
+        },
+        "collection_slider_jhwR4k": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/image1.jpg",
+            "cat_title": "Natalie Portman",
+            "cat_description": "Great site to order from! I highly recommend it to everyone.",
+            "cat_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_slider_A98BRC",
+        "collection_slider_MbnCUM",
+        "collection_slider_jhwR4k"
+      ],
+      "settings": {
+        "title": "What our Customers are Saying",
+        "description": "- Our Reviews",
+        "section_width": 80,
+        "section_width_mobile": 100,
+        "image_width_desktop": 100,
+        "image_height_desktop": 100,
+        "image_width_mobile": 72,
+        "image_height_mobile": 72,
+        "border_radius": 100,
+        "padding_top": 100,
+        "padding_bottom": 1,
+        "font_title": "serif",
+        "title_size": 1.5,
+        "title_size_mobile": 1
+      }
+    },
+    "custom_blog_page_MEpptm": {
+      "type": "custom-blog-page",
+      "settings": {
+        "heading": "Check Out our Blog",
+        "description": "<p>- Our Blog</p>",
+        "heading_size": "h1",
+        "blog": "news",
+        "blog_badge": true,
+        "post_limit": 5,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 128,
+        "padding_bottom": 146
+      }
+    },
+    "custom_product_newsletter_Wh6NYR": {
+      "type": "custom-product-newsletter",
+      "blocks": {
+        "paragraph_DwLirW": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>- Our Newsletter</p>"
+          }
+        },
+        "heading_JiQn94": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign Up to our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_W9JXKL": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_DwLirW",
+        "heading_JiQn94",
+        "email_form_W9JXKL"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_with_text_yXKm4i",
+    "collection_slider_B6RBy9",
+    "featured_collection",
+    "custom_services_jtijJb",
+    "review_slider_JgngWU",
+    "custom_blog_page_MEpptm",
+    "custom_product_newsletter_Wh6NYR"
+  ]
+}

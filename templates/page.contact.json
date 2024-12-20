@@ -1,0 +1,137 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "title": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_contact_page_bw3AbL": {
+      "type": "custom-contact-page",
+      "blocks": {
+        "column_Eaptei": {
+          "type": "column",
+          "settings": {
+            "title": "Customer Service",
+            "text": "<p>Please send us an email at <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>customercare@hygge.com</strong></a></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4YQyBn": {
+          "type": "column",
+          "settings": {
+            "title": "Public Relations",
+            "text": "<p>You can contact our media team by sending an email <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>media@hygge.com</strong></a></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mPfiCg": {
+          "type": "column",
+          "settings": {
+            "title": "Large Orders",
+            "text": "<p>If you are thinking of making a very large order, please feel free to contact us at <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>sales@hygge.com</strong></a> and we will give you a special discount</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WLMD3X": {
+          "type": "column",
+          "settings": {
+            "title": "Other Enquiries",
+            "text": "<p>For all of your other questions, please send us an email at <a href=\"https://mail.google.com/mail/u/0/#inbox\" target=\"_blank\" title=\"https://mail.google.com/mail/u/0/#inbox\"><strong>general@hygge.com</strong></a></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Eaptei",
+        "column_4YQyBn",
+        "column_mPfiCg",
+        "column_WLMD3X"
+      ],
+      "settings": {
+        "title": "We are always here to help you",
+        "description": "<p>- Ask Questions</p>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "contact_form_Xj93TQ": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Please fill out the contact form",
+        "heading_size": "h1",
+        "description": "<p>- Reach Out to Us</p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_product_newsletter_E8trQX": {
+      "type": "custom-product-newsletter",
+      "blocks": {
+        "paragraph_Pb6JcU": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>- Our Newsletter</p>"
+          }
+        },
+        "heading_4x3prG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign Up to our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_pPPbcE": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_Pb6JcU",
+        "heading_4x3prG",
+        "email_form_pPPbcE"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_contact_page_bw3AbL",
+    "contact_form_Xj93TQ",
+    "custom_product_newsletter_E8trQX"
+  ]
+}

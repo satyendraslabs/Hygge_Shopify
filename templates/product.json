@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "text_NdzWFn": {
+          "type": "text",
+          "settings": {
+            "text": "- Selling Fast",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "sku_FDfVbE": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_MYLdUn": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <i class=\"fa-regular fa-heart\"></i>\n                  </button>\n                {% endif %}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_NdzWFn",
+        "title",
+        "price",
+        "sku_FDfVbE",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "custom_liquid_MYLdUn",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "custom_product_features_pxkgAh": {
+      "type": "custom-product-features",
+      "blocks": {
+        "column_JyrHJy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Natural_4f4ab764-7644-434b-9246-ac22a26b3ae4.svg",
+            "title": "Natural",
+            "text": "<p>We are using natural ingredients only when creating our products.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hg4yDF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Protection_bb2a0dc4-57ab-434c-a092-5f82ad73adb3.svg",
+            "title": "Full Protection",
+            "text": "<p>This product provides broad spectrum SPF 50 and blue light protection.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MwFBRL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Trending_77b95e97-579e-4560-97ea-957e305a91f6.svg",
+            "title": "Trending",
+            "text": "<p>It is one of our most popular products that we have on offer.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_JyrHJy",
+        "column_hg4yDF",
+        "column_MwFBRL"
+      ],
+      "settings": {
+        "title": "Explore the Features",
+        "heading_size": "h1",
+        "description": "<p>- Product Features</p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 5,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "review_slider_AErYD3": {
+      "type": "review-slider",
+      "blocks": {
+        "collection_slider_BVibgf": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Image_5ca17b43-0aef-4ac9-83a3-38bb5d3eb62d.png",
+            "cat_title": "Anna Clarke",
+            "cat_description": "It’s quite a nice product and I am really satisfied with the quality of it.",
+            "cat_link": ""
+          }
+        },
+        "collection_slider_NmzahE": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/Image.png",
+            "cat_title": "Amy Smith",
+            "cat_description": "This is the best website I have ordered something afrom. I highly recommend.",
+            "cat_link": ""
+          }
+        },
+        "collection_slider_wrkTJj": {
+          "type": "collection-slider",
+          "settings": {
+            "cat_img": "shopify://shop_images/image1.jpg",
+            "cat_title": "Natalie Portman",
+            "cat_description": "Great site to order from! I highly recommend it to everyone.",
+            "cat_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_slider_BVibgf",
+        "collection_slider_NmzahE",
+        "collection_slider_wrkTJj"
+      ],
+      "settings": {
+        "title": "What our Customers are Saying",
+        "description": "- Product Reviews",
+        "section_width": 80,
+        "section_width_mobile": 100,
+        "image_width_desktop": 100,
+        "image_height_desktop": 100,
+        "image_width_mobile": 72,
+        "image_height_mobile": 72,
+        "border_radius": 100,
+        "padding_top": 15,
+        "padding_bottom": 15,
+        "font_title": "serif",
+        "title_size": 1.5,
+        "title_size_mobile": 1
+      }
+    },
+    "custom_related_products_CPTthF": {
+      "type": "custom-related-products",
+      "settings": {
+        "description": "<p>- Explore More</p>",
+        "heading": "Related Products",
+        "heading_size": "h1",
+        "products_to_show": 9,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_product_newsletter_WePYJV": {
+      "type": "custom-product-newsletter",
+      "blocks": {
+        "paragraph_aAmykY": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>- Our Newsletter</p>"
+          }
+        },
+        "heading_X9k9aD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign Up to our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_fUEjjT": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_aAmykY",
+        "heading_X9k9aD",
+        "email_form_fUEjjT"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_product_features_pxkgAh",
+    "related-products",
+    "review_slider_AErYD3",
+    "custom_related_products_CPTthF",
+    "custom_product_newsletter_WePYJV"
+  ]
+}
